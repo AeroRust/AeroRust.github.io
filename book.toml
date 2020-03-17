@@ -16,7 +16,7 @@ preferred-dark-theme = ""
 [preprocessor.index]
 
 [output.html]
-default-theme = "light"
+default-theme = "navy"
 preferred-dark-theme = "navy"
 # no-section-label = false
 git-repository-url = "https://github.com/AeroRust/AeroRust.github.io"
