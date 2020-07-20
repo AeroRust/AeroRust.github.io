@@ -2,7 +2,7 @@
 
 ## AeroRust WG!
 
-**AeroRust** is [**Aero**space](en.wikipedia.org/wiki/Aerospace) and [**Rust** (the programming language)](https://rust-lang.org) Working Group aiming to help push the _Open-source community_ more into the growing Aerospace industry, by providing information, materials, tools, crates, etc. to the industry and hobbyists.
+**AeroRust** is [**Aero**space](https://en.wikipedia.org/wiki/Aerospace) and [**Rust** (the programming language)](https://rust-lang.org) Working Group aiming to help push the _Open-source community_ more into the growing Aerospace industry, by providing information, materials, tools, crates, etc. to the industry and hobbyists.
 
 Our community consists of people (_110+_ in Discord) spanning in different areas, expertise, engineers, developers, and people working or have worked on projects in the area.
 
