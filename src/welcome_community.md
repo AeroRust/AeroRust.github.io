@@ -13,8 +13,9 @@ Nothing is mandatory though, so feel free to do whatever you like 😄
 
 * Github: [https://github.com/AeroRust](https://github.com/AeroRust)
 
-* The Rust programming language: https://rust-lang.org
-Reddit Announcement: [Reddit.com](https://www.reddit.com/r/rust/comments/ejdv7w/announcing_aerorust_the_unofficial_working_group/)
+* The Rust programming language: [https://rust-lang.org](https://rust-lang.org)
+
+* Reddit Announcement: [Reddit.com](https://www.reddit.com/r/rust/comments/ejdv7w/announcing_aerorust_the_unofficial_working_group/)
 
 * "Sealed Rust: Part 1 - The Pitch": [https://ferrous-systems.com/blog/sealed-rust-the-pitch](https://ferrous-systems.com/blog/sealed-rust-the-pitch)
 
