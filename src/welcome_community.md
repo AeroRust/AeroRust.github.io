@@ -17,7 +17,3 @@ Nothing is mandatory though, so feel free to do whatever you like 😄
 
 * Reddit Announcement: [Reddit.com](https://www.reddit.com/r/rust/comments/ejdv7w/announcing_aerorust_the_unofficial_working_group/)
 
-* "Sealed Rust: Part 1 - The Pitch": [https://ferrous-systems.com/blog/sealed-rust-the-pitch](https://ferrous-systems.com/blog/sealed-rust-the-pitch)
-
-* "Sealed Rust Update: Part 2 -The plan": [https://ferrous-systems.com/blog/sealed-rust-the-plan](https://ferrous-systems.com/blog/sealed-rust-the-plan)
-
