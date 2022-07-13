@@ -13,15 +13,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          # needs the package-lock.json file
+          # cache: 'npm'
       - name: Install npm dependencies
         run: npm install
       - name: Build npm
         env:
           NODE_ENV: production
-        run: npm build
-      - name: Build zola and_deploy
-        uses: shalzz/zola-deploy-action@v0.14.1
+        run: npm run build
+      - name: Build Zola and deploy
+        uses: shalzz/zola-deploy-action@v0.15.3
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
