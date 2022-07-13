@@ -1,0 +1,43 @@
+@import "custom";
+
+.github-corner {
+    position: absolute;
+    z-index: 100;
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+.github-corner:hover .octo-arm {
+    animation: none
+}
+
+.github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@include media-breakpoint-up(sm) {
+
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+.form-control-dark:focus {
+    border-color: $white;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}

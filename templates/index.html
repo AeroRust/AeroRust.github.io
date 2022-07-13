@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<div class="container col-xxl-8 px-4 py-5 text-gray-300">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-12 col-lg-6 mx-auto">
+      <img src="{{ get_url(path="images/aerorust-ferris.png") }}" class="d-block img-fluid"
+        alt="Ferris wearing an AeroRust hat" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">The <strong class="text-aerorust-light">AeroRust</strong> community</h1>
+      <p class="lead">
+        Our community aims to grow the <a href="{{ config.extra.rustlang_website }}">Rust</a>
+        programming language ecosystem for aerospace applications because it
+        "empowers everyone to build reliable and efficient software".
+      </p>
+      <p class="lead">
+        Rust has many compelling features and benefits over other languages used in these industries,
+        including easily interoperable with other languages and toolchains.
+      </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="{{ config.extra.github_org }}" target="_blank" class="btn btn-outline-light btn-lg px-4 me-md-2"><i
+            class="bi bi-github me-2"></i>Github</a>
+        <a href="{{ config.extra.discord_invite }}" target="_blank" class="btn btn-outline-light btn-lg px-4 position-relative"><i
+            class="bi bi-discord me-2"></i>Join Discord
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{ config.extra.discord_members_count }}<span class="visually-hidden">members</span>
+            </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# <p>Click <a href="{{ get_url(path=" @/blog/_index.md") }}">here</a> to see my posts.</p> #}
+{% endblock content %}
