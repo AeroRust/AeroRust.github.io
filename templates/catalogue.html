@@ -16,33 +16,29 @@
       - the official crates registry.
     </p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <button type="button" class="btn btn-aerorust-light btn-lg px-4 me-md-2 text-white">View Crates</button>
-        <button type="button" class="btn btn-outline-aerorust-light btn-lg px-4">By Category</button>
+      <a class="btn btn-aerorust-light btn-lg px-4 me-md-2 text-white">View Crates</a>
+      <a class="btn btn-outline-aerorust-light btn-lg px-4">By Category</a>
     </div>
   </div>
 </div>
 
-{# <div class="container col-xxl-8 px-4 py-5 text-gray-300">
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-12 col-lg-6 mx-auto">
-      <img src="" class="d-block mx-lg-auto img-fluid"
-        alt="Bootstrap Themes" width="227" height="227" loading="lazy">
-    </div>
-    <div class="col-lg-6">
-      <h1 class="display-5 fw-bold lh-1 mb-3"></h1>
-      <h2>Yes! There is some Rust in space!</h2>
-      <p class="lead">
-        This is a catalogue of crates (Rust's libraries) separated by in their categories.
-        Only categories related to aerospace or space applications are included in this list
-        and they are automatically extracted for <a href="https://crates.io">crates.io</a>
-        - the official crates registry.
-      </p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        
-      </div>
-    </div>
-  </div>
-</div> #}
+{% set categories = load_data(path="categories.json") %}
 
-{# <p>Click <a href="{{ get_url(path=" @/blog/_index.md") }}">here</a> to see my posts.</p> #}
+<div class="container px-4 py-5">
+  <h2 class="pb-5 border-bottom">Aerospace crates by categories</h2>
+
+  <div class="row row-cols-1 row-cols-md-3 g-3 py-5">
+  {% for category in categories.categories -%}
+    <div class="col">
+      <a href="#" class="card text-bg-dark link-light rounded-5 text-center h-100 rounded-5 w-100 h-100 btn btn-outline-aerorust-light">
+        <div class="card-header bg-transparent fs-1"><i class="bi {{ category.icon }}"></i></div>
+        <div class="card-body">
+          <h5 class="card-title">{{ category.name }}</h5>
+          <p class="card-text">{{ category.description }}</p>
+        </div>
+      </a>
+    </div>
+  {% endfor -%}
+  </div>
+
 {% endblock content %}
