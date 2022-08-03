@@ -1,3 +1,4 @@
+{% import "macros/meta.html" as meta_macros -%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,19 +6,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="{{ get_url(path="dist/main.css") }}" rel="stylesheet">
-  <title>{% block title %}{% endblock %} - AeroRust (AR)</title>
+  <title>{% block title %}{% endblock %} - AeroRust (&#196;R)</title>
 
   <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon-32x32.png") }}" sizes="32x32">
   <link rel="icon" type="image/png" href="{{ get_url(path="images/favicon-16x16.png") }}" sizes="16x16">
   <link rel="canonical" href="{{ current_url }}">
+
+  {# Facebook non-required meta tag -#}
+  <meta property="og:site_name" content="The AeroRust community website">
+  {% block meta -%}
+    {{ meta_macros::facebook_meta(title="Welcome!", description="The AeroRust Community website!", url=current_url, image=get_url(path="images/aerorust-ferris.png")) }}
+    {{ meta_macros::twitter_meta(title="Welcome!", description="The AeroRust Community website!", image=get_url(path="images/aerorust-ferris.png")) }}
+  {% endblock -%}
 </head>
 
 <body>
-  {% include "partials/menu.html" %}
+  {% include "partials/menu.html" -%}
 
   <section class="section text-gray-300">
     <div class="container">
-      {% block content %} {% endblock %}
+      {% block content %}{% endblock %}
     </div>
   </section>
 
