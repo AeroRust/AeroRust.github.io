@@ -8,7 +8,7 @@
     <h2 class="display-6 fst-italic">Title of a longer featured blog post</h1>
       <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
         about
-        what's most interesting in this post’s contents.</p>
+        what's most interesting in this post's contents.</p>
       <p class="lead mb-0"><a href="#" class="fw-bold">Continue reading...</a></p>
   </div>
 </div>
@@ -21,10 +21,12 @@
 
     {% for post in paginator.pages %}
     <article class="blog-post">
-      <h2 class="blog-post-title mb-1"><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+      <h2 class="blog-post-title mb-1"><a href="{{ post.permalink | safe }}">{{ post.title }}</a></h2>
       <p class="blog-post-meta">{{ post.date | date(format="%B %e, %Y") }} by {{ post.extra.author }} ( <a
           href="https://twitter.com/{{ post.extra.twitter}}" target="_blank"
-          ><i class="bi bi-twitter pe-1"></i>@{{ post.extra.twitter }}</a> )</p>
+          ><i class="bi bi-twitter pe-1"></i>@{{ post.extra.twitter }}</a> | <a
+          href="https://github.com/{{ post.extra.github}}" target="_blank"
+          ><i class="bi bi-github pe-1"></i>{{ post.extra.github }}</a> )</p>
 
       <p>{{ post.description }}</p>
 
@@ -42,8 +44,8 @@
         </li>
         {% for page in range(start=1, end=paginator.number_pagers) %}
         <li class="page-item">
-          <a class="page-link{% if paginator.current_index == page %} active{% endif %}" {% if
-            paginator.current_index==page %}aria-current="page" {% endif %} href="#">{{ page }}</a>
+          <a class="page-link{% if paginator.current_index == page %} active{% endif %}"
+          {% if paginator.current_index==page %}aria-current="page" {% endif %} href="#">{{ page }}</a>
         </li>
         {% endfor %}
         <li class="page-item">
