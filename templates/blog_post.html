@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+<div class="row g-5 mt-1">
+  <div class="col-md-8">
+    <article class="blog-post">
+      
+      <h1 class="blog-post-title pb-4 mb-4 fst-italic border-bottom">{{ page.title }}</h1>
+      <p class="blog-post-meta">{{ page.date | date(format="%B %e, %Y") }} by {{ page.extra.author }} ( <a href="https://twitter.com/{{ page.extra.twitter}}" target="_blank"><i class="bi bi-twitter pe-1"></i>@{{ page.extra.twitter}}</a> )</p>
+
+      {{ page.content | safe }}
+    </article>
+  </div>
+
+  <div class="col-md-4">
+    {% include "partials/blog_side.html" -%}
+</div>
+
+{# <ul>
+  {% for page in section.pages %}
+  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul> #}
+{% endblock content %}

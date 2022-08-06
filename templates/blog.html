@@ -1,12 +1,66 @@
 {% extends "base.html" %}
 
+{% block title %}{{ section.title }}{% endblock %}
+
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
+<div class="p-3 mt-3 p-md-4 mb-3 text-bg-light rounded">
+  <div class="col-md-8 px-0">
+    <h2 class="display-6 fst-italic">Title of a longer featured blog post</h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
+        about
+        what's most interesting in this post’s contents.</p>
+      <p class="lead mb-0"><a href="#" class="fw-bold">Continue reading...</a></p>
+  </div>
+</div>
+
+<div class="row g-5">
+  <div class="col-md-8">
+    <h3 class="pb-4 mb-4 border-bottom">
+      {{ section.title }}
+    </h3>
+
+    {% for post in paginator.pages %}
+    <article class="blog-post">
+      <h2 class="blog-post-title mb-1"><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+      <p class="blog-post-meta">{{ post.date | date(format="%B %e, %Y") }} by {{ post.extra.author }} ( <a
+          href="https://twitter.com/{{ post.extra.twitter}}" target="_blank"
+          ><i class="bi bi-twitter pe-1"></i>@{{ post.extra.twitter }}</a> )</p>
+
+      <p>{{ post.description }}</p>
+
+        {# <blockquote class="blockquote"> #}
+        <p class="fst-italic">
+          "{{ post.content | striptags | truncate(length=300) }}..."
+        </p>
+        {# </blockquote> #}
+    </article>
+    {% endfor %}
+    <nav class="mb-4" aria-label="Pagination">
+      <ul class="pagination">
+        <li class="page-item{% if paginator.previous | as_str == "" %} disabled{% endif %}">
+          <a class="page-link">Previous</a>
+        </li>
+        {% for page in range(start=1, end=paginator.number_pagers) %}
+        <li class="page-item">
+          <a class="page-link{% if paginator.current_index == page %} active{% endif %}" {% if
+            paginator.current_index==page %}aria-current="page" {% endif %} href="#">{{ page }}</a>
+        </li>
+        {% endfor %}
+        <li class="page-item">
+          <a class="page-link{% if paginator.next | as_str == "" %} disabled{% endif %}" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="col-md-4">
+    {% include "partials/blog_side.html" -%}
+  </div>
+</div>
+
+{# <ul>
   {% for page in section.pages %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
   {% endfor %}
-</ul>
+</ul> #}
 {% endblock content %}
