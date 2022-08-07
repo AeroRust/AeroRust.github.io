@@ -1,12 +1,12 @@
-<footer class="py-3 my-4 text-muted">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="{{ get_url(path="@/_index.md") }}" class="nav-link pe-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="{{ get_url(path="@/catalogue/_index.md") }}" class="nav-link pe-2 text-muted">Are we in space yet?</a></li>
-        <li class="nav-item"><a href="{{ config.extra.github_org }}" class="nav-link pe-2 text-muted"><i class="bi bi-github me-1"></i>Github</a></li>
-        <li class="nav-item"><a href="{{ config.extra.discord_invite }}" class="nav-link pe-2 text-muted"><i class="bi bi-discord me-1"></i>Discord</a></li>
-        <li class="nav-item"><a href="{{ config.extra.twitter_url }}" class="nav-link pe-2 text-muted"><i class="bi bi-twitter me-1"></i>Twitter</a></li>
-        <li class="nav-item"><a href="{{ config.extra.youtube_url }}" class="nav-link pe-2 text-muted"><i class="bi bi-youtube me-1"></i>Youtube</a></li>
+<footer class="pt-3 mt-4 text-muted">
+    <ul class="nav justify-content-center border-bottom pb-2 mb-2">
+        <li class="nav-item"><a href="{{ get_url(path="@/_index.md") }}" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="{{ get_url(path="@/catalogue/_index.md") }}" class="nav-link px-2 text-muted">Are we in space yet?</a></li>
+        <li class="nav-item"><a href="{{ config.extra.github_org }}" class="nav-link px-2 text-muted"><i class="bi bi-github me-1"></i>Github</a></li>
+        <li class="nav-item"><a href="{{ config.extra.discord_invite }}" class="nav-link px-2 text-muted"><i class="bi bi-discord me-1"></i>Discord</a></li>
+        <li class="nav-item"><a href="{{ config.extra.twitter_url }}" class="nav-link px-2 text-muted"><i class="bi bi-twitter me-1"></i>Twitter</a></li>
+        <li class="nav-item"><a href="{{ config.extra.youtube_url }}" class="nav-link px-2 text-muted"><i class="bi bi-youtube me-1"></i>Youtube</a></li>
         {# <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li> #}
     </ul>
-    <p class="text-center text-muted">© {{ now(utc=true) | date(format="%Y") }} AeroRust (&#196;R) community</p>
+    <p class="text-center">© {{ now(utc=true) | date(format="%Y") }} AeroRust (&#196;R) community</p>
 </footer>
