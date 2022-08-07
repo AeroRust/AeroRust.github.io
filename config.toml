@@ -15,10 +15,12 @@ highlight_code = true
 [extra]
 # Put all your custom variables here
 github_repo = "https://github.com/AeroRust/aerorust.github.io"
+github_propose_blog_post = "https://github.com/AeroRust/AeroRust.github.io/issues/new?assignees=&labels=blog-post&template=featured-blog-post.md&title=%5BBlog+post%5D"
 github_org = "https://github.com/AeroRust"
 discord_invite = "https://discord.gg/6wFvsFWfnu"
 discord_members_count = "300+"
 rustlang_website = "https://rust-lang.org"
 twitter_username = "@AeroRust"
 twitter_url = "https://twitter.com/AeroRust"
-youtube_url = "https://www.youtube.com/c/AeroRust"
+youtube_url = "https://youtube.com/c/AeroRust"
+email = "aerospace.rust@gmail.com"

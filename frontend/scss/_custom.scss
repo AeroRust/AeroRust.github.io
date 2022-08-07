@@ -11,6 +11,24 @@ $link-color: $aerorust-light;
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
 
+// Pagination variables - START
+$pagination-bg: transparent;
+$pagination-border-color: $aerorust-light;
+
+$pagination-focus-bg: $aerorust-light;
+$pagination-hover-color: $black;
+$pagination-hover-bg: $aerorust-light;
+$pagination-hover-border-color: $aerorust-light;
+
+$pagination-active-color: $black;
+$pagination-active-bg: $aerorust-light;
+$pagination-active-border-color: $aerorust-light;
+
+$pagination-disabled-color: $gray-600;
+$pagination-disabled-bg: $aerorust-light;
+$pagination-disabled-border-color: $aerorust-light;
+// Pagination variables - END
+
 $body-bg: $black;
 $body-color: $gray-300;
 
