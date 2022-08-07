@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+
+{% block content %}
+
+{% set blog_section = get_section(path="blog/_index.md") %}
+
+<div class="row gx-5 mt-3">
+    <div class="col-md-8">
+        <h3 class="pb-4 mb-4 border-bottom">
+            {{ section.title }}
+        </h3>
+        {% for year, posts in blog_section.pages | group_by(attribute="year") %}
+            <h2 class="{% if now(utc=true) | date(format="%Y") == year %}fw-bold{% endif %}">{{ year }}</h2>
+
+            <ul>
+            {% for post in posts %}
+                <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+
+    <div class="col-md-4">
+        {% include "partials/blog_side.html" -%}
+    </div>
+</div>
+
+{# <ul>
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul> #}
+{% endblock content %}

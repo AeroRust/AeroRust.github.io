@@ -3,23 +3,22 @@
 {% block title %}{{ section.title }}{% endblock %}
 
 {% block content %}
-<div class="p-3 mt-3 p-md-4 mb-3 text-bg-light rounded">
+{# <div class="p-3 mt-3 p-md-4 mb-3 text-bg-light rounded">
   <div class="col-md-8 px-0">
     <h2 class="display-6 fst-italic">Title of a longer featured blog post</h1>
       <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
-        about
-        what's most interesting in this post's contents.</p>
+        about what's most interesting in this post's contents.</p>
       <p class="lead mb-0"><a href="#" class="fw-bold">Continue reading...</a></p>
   </div>
-</div>
+</div> #}
 
-<div class="row g-5">
+<div class="row gx-5 gy-0 mt-3">
   <div class="col-md-8">
     <h3 class="pb-4 mb-4 border-bottom">
       {{ section.title }}
     </h3>
 
-    {% for post in paginator.pages %}
+    {% for post in paginator.pages -%}
     <article class="blog-post">
       <h2 class="blog-post-title mb-1"><a href="{{ post.permalink | safe }}">{{ post.title }}</a></h2>
       <p class="blog-post-meta">{{ post.date | date(format="%B %e, %Y") }} by {{ post.extra.author }} ( <a
@@ -36,33 +35,37 @@
         </p>
         {# </blockquote> #}
     </article>
-    {% endfor %}
-    <nav class="mb-4" aria-label="Pagination">
-      <ul class="pagination">
-        <li class="page-item{% if paginator.previous | as_str == "" %} disabled{% endif %}">
-          <a class="page-link">Previous</a>
+    {% endfor -%}
+    {% if paginator.number_pagers > 1 -%}
+    <nav aria-label="Pagination">
+      <ul class="pagination mb-0">
+        <li class="page-item me-1 {% if paginator.previous | as_str == "" %} disabled{% endif %}">
+          <a class="page-link" href="{{ paginator.previous | default(value="#") }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
         </li>
-        {% for page in range(start=1, end=paginator.number_pagers) %}
+        {% for page in range(start=1, end=paginator.number_pagers+1) -%}
         <li class="page-item">
-          <a class="page-link{% if paginator.current_index == page %} active{% endif %}"
-          {% if paginator.current_index==page %}aria-current="page" {% endif %} href="#">{{ page }}</a>
+          <a
+          class="page-link{% if paginator.current_index == page %} active{% endif %}"
+          {% if paginator.current_index==page %}aria-current="page" {% endif %}
+          href="{{ paginator.base_url ~ page }}"
+          >{{ page }}</a>
         </li>
-        {% endfor %}
+        {% endfor -%}
         <li class="page-item">
-          <a class="page-link{% if paginator.next | as_str == "" %} disabled{% endif %}" href="#">Next</a>
+          <a class="page-link ms-1 {% if paginator.next | as_str == "" %} disabled{% endif %}"
+          href="{{ paginator.next | default(value="#") }}"
+          aria-label="Next"
+          ><span aria-hidden="true">&raquo;</span></a>
         </li>
       </ul>
     </nav>
+    {% endif -%}
   </div>
 
   <div class="col-md-4">
     {% include "partials/blog_side.html" -%}
   </div>
 </div>
-
-{# <ul>
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul> #}
 {% endblock content %}
