@@ -1,20 +1,25 @@
 use std::{fs, io::ErrorKind, path::PathBuf};
 
 use anyhow::Context;
-use config::Config;
+use clap::Parser;
 use log::{error, info, LevelFilter};
-
-use scraper::{CategoryData, Scraper};
 use walkdir::{DirEntry, WalkDir};
 
-mod config;
+use scraper::{data::CategoryData, Config, Scraper};
 
+#[derive(Parser)]
+#[command(author, version, about, long_about = None)]
+/// Run the scraper that extracts all the categories and crates from crates.io
+/// database dump and matches any custom categories (missing in crates.io) to
+/// crates found on crates.io.
 pub struct Cli {}
 
 fn main() -> anyhow::Result<()> {
     env_logger::Builder::from_default_env()
         .filter_level(LevelFilter::Debug)
         .init();
+
+    let _cli = Cli::parse();
 
     // todo: make CLI configurable?
     let config_path = env!("CARGO_MANIFEST_DIR")
@@ -34,7 +39,6 @@ fn main() -> anyhow::Result<()> {
                 Some(category) => {
                     category.filtered.whitelist.insert(krate.crate_data.name.clone());
                     info!("Crate '{}' added to the '{}' category", &krate.crate_data.name, &category.name);
-                
                 },
                 None => anyhow::bail!("The '{}' crate category '{}' is not configured! Please check or update existing categories.", &krate.crate_data.name, &krate_category)
             }
