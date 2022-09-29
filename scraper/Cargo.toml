@@ -13,7 +13,7 @@ env_logger = "0.9"
 anyhow = "1.0"
 
 chrono = {version = "0.4", features = ["serde"]}
-clap = {version = "3.2", features = ["derive", "cargo"]}
+clap = {version = "4", features = ["derive", "cargo"]}
 db-dump = {version = "0.3", git = "https://github.com/LechevSpace/db-dump.git", branch = "id-serialization"}
 log = "0.4"
 octocrab = "0.17"
