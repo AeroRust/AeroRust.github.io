@@ -18,7 +18,7 @@
     <div class="col-lg-6">
       <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to the <strong class="text-aerorust-light">AeroRust</strong> community</h1>
       <p class="lead">
-        Our community aims to grow the <a href="{{ config.extra.rustlang_website }}"  target="_blank" class="fw-bold">Rust</a>
+        Our community aims to grow the <a href="{{ config.extra.rustlang_website | safe }}" target="_blank" class="fw-bold">Rust</a>
         programming language ecosystem for aerospace applications because it
         "empowers everyone to build reliable and efficient software".
       </p>
@@ -29,9 +29,9 @@
         <a href="#learn-more" class="fw-bold">Learn more...</a>
       </p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a href="{{ config.extra.github_org }}" target="_blank" class="btn btn-outline-light btn-lg px-4 me-md-2"><i
+        <a href="{{ config.extra.github_org | safe }}" target="_blank" class="btn btn-outline-light btn-lg px-4 me-md-2"><i
             class="bi bi-github me-2"></i>Github</a>
-        <a href="{{ config.extra.discord_invite }}" target="_blank" class="btn btn-outline-light btn-lg px-4 position-relative"><i
+        <a href="{{ config.extra.discord_invite | safe }}" target="_blank" class="btn btn-outline-light btn-lg px-4 position-relative"><i
             class="bi bi-discord me-2"></i>Join Discord
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {{ config.extra.discord_members_count }}<span class="visually-hidden">members</span>

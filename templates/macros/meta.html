@@ -11,9 +11,9 @@
 <meta property="og:locale:alternate" content="fr_FR" />
 <meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:site_name" content="IMDb" /> -#}
-<meta property="og:url" content="{{ url }}" />
+<meta property="og:url" content="{{ url | safe }}" />
 {% if image != "" -%}
-<meta property="og:image" content="{{ image }}" />
+<meta property="og:image" content="{{ image | safe }}" />
 {% endif -%}
 {% endmacro %}
 
@@ -25,9 +25,9 @@
     <meta name="twitter:description" content="{{ description }}">
 {% endif -%}
 {% if image != "" -%}
-    <meta name="twitter:image" content=" {{ image }}">
+    <meta name="twitter:image" content=" {{ image | safe }}">
 {% if image_alt != "" -%}
-    <meta name="twitter:image" content=" {{ image }}">
+    <meta name="twitter:image" content=" {{ image | safe }}">
 {% endif -%}
 {% endif -%}
     <meta name="twitter:card" content="{{ card }}">
