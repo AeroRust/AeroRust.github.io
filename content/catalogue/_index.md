@@ -1,4 +1,7 @@
 +++
 title = "Are we in space yet?"
-template = "catalogue.html"
+description = '''
+A catalogue of aerospace crates organized by categories.
+'''
+template = "catalogue/index.html"
 +++

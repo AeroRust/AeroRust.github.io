@@ -1,0 +1,24 @@
+<nav aria-label="Pagination">
+    <ul class="pagination mb-0">
+        <li class="page-item me-1 {% if paginator.previous | as_str == "" %} disabled{% endif %}">
+        <a class="page-link" href="{{ paginator.previous | default(value="#") }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+        </li>
+        {% for page in range(start=1, end=paginator.number_pagers+1) -%}
+        <li class="page-item">
+        <a
+        class="page-link{% if paginator.current_index == page %} active{% endif %}"
+        {% if paginator.current_index==page %}aria-current="page" {% endif %}
+        href="{{ paginator.base_url ~ page }}"
+        >{{ page }}</a>
+        </li>
+        {% endfor -%}
+        <li class="page-item">
+        <a class="page-link ms-1 {% if paginator.next | as_str == "" %} disabled{% endif %}"
+        href="{{ paginator.next | default(value="#") }}"
+        aria-label="Next"
+        ><span aria-hidden="true">&raquo;</span></a>
+        </li>
+    </ul>
+</nav>
