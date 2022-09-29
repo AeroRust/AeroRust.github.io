@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "name": "Robotics",
+            "description": "Crates applied to robotics, ROS, etc.",
+            "icon": "bi-robot"
+        },
+        {
+            "name": "Space Protocols",
+            "description": "CCSDS, NASA and other",
+            "icon": "bi-broadcast-pin"
+        },
+        {
+            "name": "Unmanned system",
+            "description": "Unmanned Aerial Vehicles, Unmanned Ground Vehicles, Underwater Vehicles, MAVLink, etc",
+            "icon": "bi-airplane"
+        },
+        {
+            "name": "Maritime",
+            "description": "Maritime crates including protocols like NMEA 0183, NMEA 2000 and more!",
+            "icon": "bi-airplane"
+        }
+    ]
+}
