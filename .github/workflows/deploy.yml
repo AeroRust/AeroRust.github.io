@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+      - categories-design
 
 name: Build and deploy GH Pages
 jobs:
@@ -21,6 +22,20 @@ jobs:
         env:
           NODE_ENV: production
         run: npm run build
+      - name: Download crates.io db dump
+        id: download-crates-io-dump
+        uses: carlosperate/download-file-action@v1
+        with:
+          file-url: 'https://static.crates.io/db-dump.tar.gz'
+          location: './.tmp'
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Run crates.io DB dump scraper
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          # args: --release --all-features
       - name: Build Zola and deploy
         uses: shalzz/zola-deploy-action@v0.15.3
         env:
