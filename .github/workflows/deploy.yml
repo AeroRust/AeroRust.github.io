@@ -2,7 +2,14 @@ on:
   push:
     branches:
       - main
-      - categories-design
+  schedule:
+    # run every day at 1 AM
+    - cron: '0 1 * * *'
+
+# Stops the running workflow of previous pushes
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 
 name: Build and deploy GH Pages
 jobs:
