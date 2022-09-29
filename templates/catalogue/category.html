@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} crates{% endblock title %}
+
+{% block content %}
+
+<div class="category py-4">
+  <div class="h-100 p-5 text-bg-dark rounded-3">
+    <h2>{{ section.title }}</h2>
+    <p class="mb-0">{{ section.description }}</p>
+  </div>
+
+  <div class="row row-cols-1 gy-4 mt-4">
+    {% set cargo_png = resize_image(path="../static/images/cargo.png", height=35, op="fit_height") -%}
+    {% set wikipedia_png = resize_image(path="../static/images/wikipedia.png", height=35, op="fit_height") -%}
+    {% for crate_page in paginator.pages -%}
+    {% set crate = crate_page.extra %}
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          {{ crate.name }}
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            {%if crate.wiki -%}
+          <a href="https://en.wikipedia.org/wiki/{{crate.wiki}}" target="blank">
+            <img height="33" src="{{ wikipedia_png.url }}">
+          </a>
+          {% endif -%}
+          {% if crate.documentation and crate.documentation is not containing("docs.rs/") -%}
+          <a href="{{crate.documentation}}">
+            <img alt="documentation" src="https://img.shields.io/docsrs/{{ crate.name }}{% if crate.max_version -%}/{{crate.max_version}}{% endif -%}">
+          </a>
+          {% else -%}
+          <a href="https://docs.rs/{{crate.name}}">
+            <img alt="docs.rs/{{crate.name}}" src="https://img.shields.io/docsrs/{{ crate.name }}{% if crate.max_version -%}/{{ crate.max_version }}{% endif -%}">
+          </a>
+          {% endif -%}
+          {%if crate.name -%}
+            <a href="https://crates.io/crates/{{crate.name}}" target="blank">
+              <img src="https://img.shields.io/crates/v/{{crate.name}}.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/{{crate.name}}" target="blank">
+              <img src="https://img.shields.io/crates/d/{{crate.name}}.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/{{crate.name}}" target="blank">
+              <img src="https://img.shields.io/crates/dr/{{crate.name}}.svg?maxAge=2592000">
+            </a>
+          {% endif -%}
+          {# {%if crate.github -%}
+            <a href="https://github.com/{{crate.github}}" target="blank">
+              <img src="https://img.shields.io/github/stars/{{crate.github}}.svg?style=social&amp;label=Star&amp;maxAge=2592000">
+            </a>
+          {% endif %} #}
+          
+          {# {%if crate.github -%}
+          <a href="https://github.com/{{crate.github}}" target="blank">
+            <img height="35" src="/images/github.png">
+          </a>
+          {% endif -%} #}
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/{{ crate.name }}" target="blank">
+                <img alt="crates.io/crates/{{ crate.name }}" height="35" src="{{ cargo_png.url }}">
+              </a>
+              {% if crate.repository -%}
+              <div class="vr"></div>
+              <small>
+                <a href="{{ crate.repository }}"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              {% endif -%}
+              <div class="vr"></div>
+              <small>
+                {% if crate.documentation and crate.documentation is not containing("docs.rs/") -%}
+                <a href="{{ crate.documentation }}">Documentation</a></span>
+                {% else -%}
+                <a href="https://docs.rs/{{crate.name}}">Docs.rs/{{ crate.name }}</a>
+                {% endif -%}
+              </small>
+              </div>
+            {# {% if crate.name -%}{{crate.name}} {% else -%}{{crate.github}}{% endif -%} #}
+            
+            
+          </div>
+          <p class="card-text">
+            {% if crate.description -%}
+            {{crate.description}}
+            {% endif -%}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor -%}
+
+    {% if paginator.number_pagers > 1 -%}
+    {% include "partials/pagination.html" %}
+    {% endif -%}
+  </div>
+</div>
+{% endblock content %}

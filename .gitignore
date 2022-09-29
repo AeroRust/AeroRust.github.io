@@ -3,3 +3,7 @@ package-lock.json
 node_modules
 .env
 static/dist
+target
+content/catalogue/**/
+.tmp
+static/processed_images

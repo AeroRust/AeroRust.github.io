@@ -44,3 +44,10 @@
     border-color: $white;
     box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
 }
+
+.crate {
+
+    .card-header a, .card-title a {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Are we in space yet? catalogue{% endblock title %}
+
+{% block content %}
+
+<div class="my-4 text-center">
+  <img class="d-block mx-auto mb-4" src="{{ get_url(path="images/cargo.png") }}" alt="" width="72" height="72">
+  <h1 class="display-5 fw-bold">Are we <strong class="text-aerorust-light">in space</strong> yet?</h1>
+  <h2>Yes! There is some Rust in space!</h2>
+  <div class="col-lg-8 mx-auto">
+    <p class="lead mb-4">
+      This is a catalogue of crates (Rust's libraries) separated by in their categories.
+      Only categories related to aerospace or space applications are included in this list
+      and they are automatically extracted for <a href="https://crates.io">crates.io</a>
+      - the official crates registry.
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      {# <a class="btn btn-aerorust-light btn-lg px-4 me-md-2 text-white">View Crates</a> #}
+      <a href="#crates-by-categories" class="btn btn-outline-aerorust-light btn-lg px-4">By Category</a>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5" id="crates-by-categories">
+  <h2 class="pb-4 border-bottom">Aerospace crates by categories</h2>
+
+  <div class="row row-cols-1 row-cols-md-3 g-3 mt-4">
+    {% for category_subsection in section.subsections | sort() -%}
+    {% set category_section = get_section(path=category_subsection, metadata_only=true) -%}
+    <div class="col">
+      <a href="{{ category_section.permalink }}" class="card text-bg-dark link-light rounded-5 text-center h-100 rounded-5 w-100 h-100 btn btn-outline-aerorust-light">
+        <div class="card-header bg-transparent fs-1"><i class="bi {{ category_section.extra.icon }}"></i></div>
+        <div class="card-body">
+          <h5 class="card-title">{{ category_section.title }}</h5>
+          <p class="card-text">{{ category_section.description }}</p>
+        </div>
+      </a>
+    </div>
+  {% endfor -%}
+  </div>
+
+{% endblock content %}

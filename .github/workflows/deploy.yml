@@ -2,6 +2,14 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # run every day at 1 AM
+    - cron: '0 1 * * *'
+
+# Stops the running workflow of previous pushes
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 
 name: Build and deploy GH Pages
 jobs:
@@ -21,10 +29,24 @@ jobs:
         env:
           NODE_ENV: production
         run: npm run build
+      - name: Download crates.io db dump
+        id: download-crates-io-dump
+        uses: carlosperate/download-file-action@v1
+        with:
+          file-url: 'https://static.crates.io/db-dump.tar.gz'
+          location: './.tmp'
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Run crates.io DB dump scraper
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          # args: --release --all-features
       - name: Build Zola and deploy
-        uses: shalzz/zola-deploy-action@v0.15.3
+        uses: shalzz/zola-deploy-action@v0.16.1
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
           # Provide personal access token
-          TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
