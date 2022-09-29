@@ -1,0 +1,109 @@
+[[categories]]
+name = "Astrodynamics"
+description = "Celestial mechanics applied to space vehicles."
+icon = "bi-question-lg"
+blacklist = []
+
+[[categories]]
+name = "Error correction"
+# description = "TODO"
+icon = "bi-wrench-adjustable-circle"
+blacklist = []
+
+[[categories]]
+name = "Robotics"
+description = "Crates applied to robotics, ROS, etc."
+canonical_slug = "science::robotics"
+icon = "bi-robot"
+blacklist = []
+
+[[categories]]
+name = "Space protocols"
+description = "Protocol implementations for implications in space like CCSDS."
+canonical_slug = "aerospace::space-protocols"
+icon = "bi-broadcast-pin"
+blacklist = []
+
+[[categories]]
+name = "Software Development Kits"
+# description = "TODO"
+icon = "bi-question-lg"
+blacklist = []
+
+[[categories]]
+name = "Aerospace protocols"
+# description = "TODO"
+canonical_slug = "aerospace::protocols"
+icon = "bi-question-lg"
+blacklist = []
+
+[[categories]]
+name = "Protocols"
+description = "Other protocols like delay-tolerant networking"
+canonical_slug = "aerospace::protocols"
+icon = "bi-question-lg"
+blacklist = []
+
+[[categories]]
+name = "Parsers"
+# description = "TODO"
+icon = "bi-bar-chart-steps"
+blacklist = []
+
+[[categories]]
+name = "Units of measure"
+description = """
+A unit of measurement is a definite magnitude of a quantity, defined and
+adopted by convention or by law, that is used as a standard for
+measurement of the same kind of quantity.
+"""
+icon = "bi-rulers"
+blacklist = []
+
+[[crates]]
+name = "arsdk-rs"
+categories = ["Software Development Kits", "Protocols"]
+
+[[crates]]
+name = "adsb_deku"
+categories = ["Parsers", "Aerospace protocols"]
+
+[[crates]]
+name = "uom"
+categories = ["Units of measure"]
+
+[[crates]]
+name = "mav-sdk"
+categories = ["Software Development Kits", "Protocols"]
+
+[[crates]]
+name = "labrador-ldpc"
+categories = ["Error correction"]
+
+[[crates]]
+name = "YANP"
+categories = ["Parsers"]
+
+[[crates]]
+name = "NMEA"
+categories = ["Parsers"]
+
+[[crates]]
+name = "nyx-space"
+categories = ["Astrodynamics"]
+
+[[crates]]
+name = "bp7"
+categories = ["Protocols"]
+
+[[crates]]
+name = "dtn7"
+categories = ["Protocols"]
+
+[[crates]]
+name = "ccsds_primary_header"
+categories = ["Space protocols", "Parsers"]
+
+[[crates]]
+name = "ccsds_spacepacket"
+categories = ["Space protocols", "Parsers"]

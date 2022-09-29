@@ -1,0 +1,27 @@
+[package]
+authors = ["AeroRust <aerospace.rust@gmail.com>", "Lachezar Lechev <elpiel93@gmail.com>"]
+name = "scraper"
+version = "0.1.0"
+
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# for binary
+env_logger = "0.9"
+
+anyhow = "1.0"
+
+chrono = {version = "0.4", features = ["serde"]}
+clap = {version = "3.2", features = ["derive", "cargo"]}
+db-dump = {version = "0.3", git = "https://github.com/LechevSpace/db-dump.git", branch = "id-serialization"}
+log = "0.4"
+octocrab = "0.17"
+
+serde = {version = "1", features = ["derive"]}
+serde_json = "1.0"
+slug = "0.1"
+toml = "0.5"
+# to remove old contend files and directories for categories & crates
+walkdir = "2.3"
+remove_dir_all = "0.7"
