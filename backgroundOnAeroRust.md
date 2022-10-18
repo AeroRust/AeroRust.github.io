@@ -3,8 +3,8 @@
 ##### What is the AeroRust community?
 
 The AeroRust community is an initiative to propel new contributors into the world of open source and the aerospace industry. 
-The term aerospace is derived from the words aeronautics and spaceflight. The aerospace industry is engaged in the research, development, and manufacture of flight vehicles, including unpowered gliders and sailplanes , uncrewed aerial vehicles (UAVs), lighter-than-air craft, heavier-than-air craft (both fixed-wing and rotary-wing), missiles, space launch vehicles, and spacecrafts (crewed and uncrewed) etc.
-The idea is to provide information, materials, tools, crates and etc. to hobbyists and industry leaders, primarily in the Rust language, which is picking up speed and it's already making a change in other industries and inspiring changes in other languages and communities. More on this in the Rust benefits section coming up.
+The term aerospace is derived from the words aeronautics and spaceflight. The aerospace industry is engaged in the research, development, and manufacture of flight vehicles, including unpowered gliders and sailplanes , uncrewed aerial vehicles (UAVs), lighter-than-air crafts, heavier-than-air crafts (both fixed-wing and rotary-wing), missiles, space launch vehicles, and spacecrafts (crewed and uncrewed) etc.
+The idea is to provide information, materials, tools, crates and etc. to hobbyists and industry leaders, primarily in the Rust language, which is picking up speed, already making a change in other industries and inspiring changes in other languages and communities. More on this in the Rust benefits section coming up.
 
 
 ##### Who is it for? Who can participate?
@@ -15,7 +15,7 @@ Practically anyone, there’s no age/ experience barrier! All you need is an inc
 ##### How to join and contribute?
 
 [Discord](https://discord.com/invite/6wFvsFWfnu) says hi, feel free to drop in if you’re even remotely interested in robotics, programming, aerospace etc.
-For the serious kind, there full - fledged working groups, where you’ll find people who are developing many projects (from programming to educational) under the AeroRust organization. A good starting point to get involved is to check out https://github.com/AeroRust/WorkingGroup/issues, where you can find or share new ideas, current projects and more
+For the serious kind, there exist full - fledged working groups, where you’ll find people who are developing many projects (from programming to educational) under the AeroRust organization. A good starting point to get involved is to check out https://github.com/AeroRust/WorkingGroup/issues, where you can find or share new ideas, current projects and more
 
 ##### Benefits of using Rust
 
@@ -27,7 +27,7 @@ For the serious kind, there full - fledged working groups, where you’ll find p
 3. Memory Safety:
 * Rust gives you the choice of storing data on the stack or on the heap and determines at compile time when memory is no longer needed and can be cleaned up. This allows efficient usage of memory as well as more performant memory access. 
 * Rust guarantees memory safety and lets you control thread behavior and how resources are allocated among threads.
-* Rust strives to have as many zero-cost abstractions as possible—abstractions that are as equally as performant as the equivalent hand-written code, whcih enables you to build complex systems.
+* Rust strives to have as many zero-cost abstractions as possible— abstractions that are as equally as performant as the equivalent hand-written code, whcih enables you to build complex systems.
 * Garbage Collection - Rust doesn’t have garbage collection like most others, the compiler in Rust enforces checks for invalid memory reference leaks and other hazardous or irregular behavior through a unique system of ownership and a borrow checker, which ensures that references and pointers do not outlive the data they point to.
 
 Tilde, an early production user of Rust in their Skylight product, found they were able to reduce their memory usage from 5GiB to 50MiB by rewriting certain Java HTTP endpoints in idiomatic Rust. 
