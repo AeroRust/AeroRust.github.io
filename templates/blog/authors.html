@@ -1,0 +1,9 @@
+{% macro comma_separated(authors) %}
+    {% for author in authors %}
+    {{ author.name }} ( <a href="https://twitter.com/{{ author.twitter}}" target="_blank">
+    <i class="bi bi-twitter pe-1"></i>@{{ author.twitter }}</a> |
+    <a href="https://github.com/{{ author.github}}" target="_blank"><i class="bi bi-github pe-1"></i>{{ author.github }}</a>
+    ) {% if not loop.last %},{% endif %}
+
+    {% endfor %}
+{% endmacro comma_separated %}

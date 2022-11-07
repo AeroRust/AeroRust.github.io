@@ -21,11 +21,15 @@
     {% for post in paginator.pages -%}
     <article class="blog-post">
       <h2 class="blog-post-title mb-1"><a href="{{ post.permalink | safe }}">{{ post.title }}</a></h2>
-      <p class="blog-post-meta">{{ post.date | date(format="%B %e, %Y") }} by {{ post.extra.author }} ( <a
-          href="https://twitter.com/{{ post.extra.twitter}}" target="_blank"
-          ><i class="bi bi-twitter pe-1"></i>@{{ post.extra.twitter }}</a> | <a
-          href="https://github.com/{{ post.extra.github}}" target="_blank"
-          ><i class="bi bi-github pe-1"></i>{{ post.extra.github }}</a> )</p>
+      <p class="blog-post-meta">{{ post.date | date(format="%B %e, %Y") }} by
+        {{ authors::comma_separated(authors=post.extra.author) }}
+        {# {% for author in post.extra.author %}
+        {{ author.name }} ( <a href="https://twitter.com/{{ author.twitter}}" target="_blank">
+        <i class="bi bi-twitter pe-1"></i>@{{ author.twitter }}</a> |
+        <a href="https://github.com/{{ author.github}}" target="_blank"><i class="bi bi-github pe-1"></i>{{ author.github }}</a> ) {% if not loop.last %},{% endif %}
+
+        {% endfor %} #}
+      </p>
 
       <p>{{ post.description }}</p>
 

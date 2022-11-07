@@ -3,14 +3,14 @@
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block content %}
+
 <div class="row gx-5 mt-3">
   <div class="col-md-8">
     <article class="blog-post">
       <h1 class="blog-post-title pb-4 mb-4 fst-italic border-bottom">{{ page.title }}</h1>
-      <p class="blog-post-meta">{{ page.date | date(format="%B %e, %Y") }} by {{ page.extra.author }} ( <a href="https://twitter.com/{{ page.extra.twitter}}" target="_blank"><i class="bi bi-twitter pe-1"></i>@{{ page.extra.twitter}}</a> | <a
-        href="https://github.com/{{ page.extra.github}}" target="_blank"
-        ><i class="bi bi-github pe-1"></i>{{ page.extra.github }}</a> )</p>
-
+      <p class="blog-post-meta">{{ page.date | date(format="%B %e, %Y") }} by
+        {{ authors::comma_separated(authors=page.extra.author) }}
+      </p>
       {{ page.content | safe }}
     </article>
   </div>
