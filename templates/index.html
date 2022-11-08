@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}{{ section.title }}{% endblock title %}
 
 {% block meta %}
-  {{ meta_macros::facebook_meta(url=current_url, title="Welcome!", type="website", description="Welcome to the AeroRust community website!", image=get_url(path="images/aerorust-ferris.png")) }}
-  {{ meta_macros::twitter_meta(title="Welcome!", description="Welcome to the AeroRust community website!", image=get_url(path="images/aerorust-ferris.png")) }}
+  {{ meta_macros::facebook_meta(url=current_url, title="Welcome to AeroRust (ÄR) - Your launchpad to space", type="website", description=section.description, image=get_url(path="images/aerorust-ferris.png")) }}
+  {{ meta_macros::twitter_meta(title="Welcome to AeroRust (ÄR) - Your launchpad to space", description=section.description, image=get_url(path="images/aerorust-ferris.png")) }}
 {% endblock %}
 
 {% block content %}
-
 <div class="col-xxl-8 py-4 text-gray-300">
   <div class="row flex-lg-row-reverse align-items-center g-5">
     <div class="col-10 col-sm-12 col-lg-6 mx-auto">
@@ -26,7 +25,7 @@
         Rust has many compelling features and benefits over other languages used in these industries,
         including easily interoperable with other languages and tool chains.
         <br>
-        <a href="#learn-more" class="fw-bold">Learn more...</a>
+        {# <a href="#learn-more" class="fw-bold">Learn more...</a> #}
       </p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
         <a href="{{ config.extra.github_org | safe }}" target="_blank" class="btn btn-outline-light btn-lg px-4 me-md-2"><i

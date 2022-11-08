@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 
-{% block title %}Are we in space yet? catalogue{% endblock title %}
+{% block title %}{{ section.title }}{% endblock title %}
+
+{% block meta %}
+  {{ meta_macros::facebook_meta(url=current_url, title=section.title, type="website", description=section.description, image=get_url(path="images/aerorust-ferris.png")) }}
+  {{ meta_macros::twitter_meta(title=section.title, description=section.description, image=get_url(path="images/aerorust-ferris.png")) }}
+{% endblock %}
 
 {% block content %}
-
 <div class="my-4 text-center">
   <img class="d-block mx-auto mb-4" src="{{ get_url(path="images/cargo.png") }}" alt="" width="72" height="72">
   <h1 class="display-5 fw-bold">Are we <strong class="text-aerorust-light">in space</strong> yet?</h1>
   <h2>Yes! There is some Rust in space!</h2>
   <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">
-      This is a catalogue of crates (Rust's libraries) separated by in their categories.
-      Only categories related to aerospace or space applications are included in this list
-      and they are automatically extracted for <a href="https://crates.io">crates.io</a>
+      This is a catalogue of crates (Rust's libraries) arranged in categories.
+      Only categories for aerospace or space applications are included in this list
+      and they are automatically populated using <a href="https://crates.io">crates.io</a>
       - the official crates registry.
     </p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -37,7 +41,6 @@
         </div>
       </a>
     </div>
-  {% endfor -%}
+    {% endfor -%}
   </div>
-
 {% endblock content %}

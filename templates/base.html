@@ -16,8 +16,8 @@
   {# Facebook non-required meta tag -#}
   <meta property="og:site_name" content="The AeroRust community website">
   {% block meta -%}
-    {{ meta_macros::facebook_meta(title="Welcome!", description="The AeroRust Community website!", url=current_url, image=get_url(path="images/aerorust-ferris.png")) }}
-    {{ meta_macros::twitter_meta(title="Welcome!", description="The AeroRust Community website!", image=get_url(path="images/aerorust-ferris.png")) }}
+    {{ meta_macros::facebook_meta(title=config.extra.default.meta.title, description=config.extra.default.meta.description, url=current_url, image=get_url(path="images/aerorust-ferris.png")) }}
+    {{ meta_macros::twitter_meta(title=config.extra.default.meta.title, description=config.extra.default.meta.description, image=get_url(path="images/aerorust-ferris.png")) }}
   {% endblock -%}
 </head>
 

@@ -24,3 +24,10 @@ twitter_username = "@AeroRust"
 twitter_url = "https://twitter.com/AeroRust"
 youtube_url = "https://youtube.com/c/AeroRust"
 email = "aerospace.rust@gmail.com"
+[extra.default.meta]
+title = "Welcome to AeroRust (ÄR) - Your launchpad to space"
+description = """
+We build the Open-source ecosystem of Rust for aerospace applications.
+With more than 400 members and multiple projects in the aerospace domain:
+drones, maritime, "Are we in space yet?" crates catalogue and more.
+"""
