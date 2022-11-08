@@ -2,6 +2,11 @@
 
 {% block title %}{{ section.title }}{% endblock %}
 
+{% block meta %}
+  {{ meta_macros::facebook_meta(url=current_url, title=section.title ~ " - AeroRust (ÄR)", type="website", description=section.description, image=get_url(path="images/aerorust-ferris.png")) }}
+  {{ meta_macros::twitter_meta(title=section.title ~ " - AeroRust (ÄR)", description=section.description, image=get_url(path="images/aerorust-ferris.png")) }}
+{% endblock %}
+
 {% block content %}
 {# <div class="p-3 mt-3 p-md-4 mb-3 text-bg-light rounded">
   <div class="col-md-8 px-0">
@@ -11,7 +16,6 @@
       <p class="lead mb-0"><a href="#" class="fw-bold">Continue reading...</a></p>
   </div>
 </div> #}
-
 <div class="row gx-5 gy-0 mt-3">
   <div class="col-md-8">
     <h3 class="pb-4 mb-4 border-bottom">
@@ -23,21 +27,17 @@
       <h2 class="blog-post-title mb-1"><a href="{{ post.permalink | safe }}">{{ post.title }}</a></h2>
       <p class="blog-post-meta">{{ post.date | date(format="%B %e, %Y") }} by
         {{ authors::comma_separated(authors=post.extra.author) }}
-        {# {% for author in post.extra.author %}
-        {{ author.name }} ( <a href="https://twitter.com/{{ author.twitter}}" target="_blank">
-        <i class="bi bi-twitter pe-1"></i>@{{ author.twitter }}</a> |
-        <a href="https://github.com/{{ author.github}}" target="_blank"><i class="bi bi-github pe-1"></i>{{ author.github }}</a> ) {% if not loop.last %},{% endif %}
-
-        {% endfor %} #}
       </p>
 
       <p>{{ post.description }}</p>
 
-        {# <blockquote class="blockquote"> #}
-        <p class="fst-italic">
-          "{{ post.content | striptags | truncate(length=300) }}..."
-        </p>
-        {# </blockquote> #}
+      {# <blockquote class="blockquote"> #}
+      {% if post.extra.show_quote %}
+      <p class="fst-italic">
+        "{{ post.content | striptags | truncate(length=300) }}..."
+      </p>
+      {% endif %}
+      {# </blockquote> #}
     </article>
     {% endfor -%}
     {% if paginator.number_pagers > 1 -%}
