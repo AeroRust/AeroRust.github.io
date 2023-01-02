@@ -32,9 +32,9 @@
       <p>{{ post.description }}</p>
 
       {# <blockquote class="blockquote"> #}
-      {% if post.extra.show_quote %}
+      {% if post.summary %}
       <p class="fst-italic">
-        "{{ post.content | striptags | truncate(length=300) }}..."
+        "{{ post.summary | striptags }}" <a href="{{ post.permalink }}#continue-reading">Continue Reading</a>
       </p>
       {% endif %}
       {# </blockquote> #}
