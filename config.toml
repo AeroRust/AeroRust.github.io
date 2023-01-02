@@ -24,6 +24,8 @@ twitter_username = "@AeroRust"
 twitter_url = "https://twitter.com/AeroRust"
 youtube_url = "https://youtube.com/c/AeroRust"
 email = "aerospace.rust@gmail.com"
+# Google analytics tag
+google_tag = "G-NSCZ6RQFN6"
 [extra.default.meta]
 title = "Welcome to AeroRust (ÄR) - Your launchpad to space"
 description = """
