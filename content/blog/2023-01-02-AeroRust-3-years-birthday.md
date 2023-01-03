@@ -10,6 +10,8 @@ It's time to reveal the 2023 Roadmap, so happy anniversary to all of you - new a
 [extra]
 draft = false
 show_toc = true
+# youtube thumbnail of "Exploring Rust in Robotics"
+meta_image = "https://i3.ytimg.com/vi/yc1OWMkde8w/sddefault.jpg"
 
 [[extra.author]]
 name = "Lachezar Lechev"
@@ -57,7 +59,7 @@ I want to say directly that I disagree but I do understand them. There are many 
 
 Since we strive to be as open as possible, you can read the full proposal in [this document](https://docs.google.com/document/d/10EX_yt1MTL1DmzGXMm3hn2LIWu4xOsZRRI7_QGMx3oc).
 
-I also want to take this time to say a big **THANK YOU ♥** to [Alice Cecile](https://github.com/alice-i-cecile) for providing an in-depth feedback, and Archie Tilbrook and a few other people for reading through the proposal.
+I also want to take this time to say a big **THANK YOU ♥** to [Alice Cecile](https://github.com/alice-i-cecile) for providing an in-depth feedback, and Archie Tilbrook, Spencer Imbleau and a few other people for reading through the proposal.
 
 Also, thank you ♥ [Sage Griffin](https://github.com/sgrif) for providing feedback on why our proposal was not accepted in this instalment of the grants.
 
