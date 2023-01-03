@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
+
 {% block title %}{{ page.title }}{% endblock %}
+
+{% block meta -%}
+    {{ meta_macros::facebook_meta(title=page.title, description=page.summary, url=current_url, image=page.extra.meta_image) }}
+    {{ meta_macros::twitter_meta(title=page.title, description=page.summary, image=page.extra.meta_image) }}
+{% endblock -%}
 
 {% block content %}
 
