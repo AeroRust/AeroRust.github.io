@@ -44,7 +44,7 @@ jobs:
           command: run
           # args: --release --all-features
       - name: Build Zola and deploy
-        uses: shalzz/zola-deploy-action@v0.16.1
+        uses: shalzz/zola-deploy-action@v0.17.0
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
