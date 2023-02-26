@@ -112,3 +112,23 @@ categories = ["Space protocols", "Parsers"]
 [[crates]]
 name = "sgp4"
 categories = ["Astrodynamics", "Parsers"]
+
+[[crates]]
+name = "apex-rs"
+description = "An ARINC 653 API wrapper"
+repository = "https://github.com/aeronautical-informatics/apex-rs"
+
+[[crates]]
+name = "opentaws"
+description = "A TAWS trying to implement DO-367"
+repository = "https://github.com/aeronautical-informatics/openTAWS"
+
+[[crates]]
+name = "opencas"
+description = "A no_std port of the Collision Avoidance System (CAS) from Stanford/SISL"
+repository = "https://github.com/aeronautical-informatics/openCAS"
+
+[[crates]]
+name = "xng-rs"
+description = "An API wrapper for the XNG separation kernel/hypervisor"
+repository = "https://github.com/aeronautical-informatics/xng-rs"
