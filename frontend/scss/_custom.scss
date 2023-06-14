@@ -10,6 +10,7 @@ $link-color: $aerorust-light;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/variables-dark";
 
 // Pagination variables - START
 $pagination-bg: transparent;
