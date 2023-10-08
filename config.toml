@@ -18,7 +18,7 @@ github_repo = "https://github.com/AeroRust/aerorust.github.io"
 github_propose_blog_post = "https://github.com/AeroRust/AeroRust.github.io/issues/new?assignees=&labels=blog-post&template=featured-blog-post.md&title=%5BBlog+post%5D"
 github_org = "https://github.com/AeroRust"
 discord_invite = "https://discord.gg/6wFvsFWfnu"
-discord_members_count = "500+"
+discord_members_count = "560+"
 rustlang_website = "https://rust-lang.org"
 twitter_username = "@AeroRust"
 twitter_url = "https://twitter.com/AeroRust"
@@ -30,6 +30,6 @@ google_tag = "G-NSCZ6RQFN6"
 title = "Welcome to AeroRust (ÄR) - Your launchpad to space"
 description = """
 We build the Open-source ecosystem of Rust for aerospace applications.
-With more than 500 members and multiple projects in the aerospace domain:
+With more than 560 members and multiple projects in the aerospace domain:
 drones, maritime, "Are we in space yet?" crates catalogue and more.
 """
