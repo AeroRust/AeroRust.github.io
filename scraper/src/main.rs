@@ -25,7 +25,7 @@ fn main() -> anyhow::Result<()> {
     let config_path = env!("CARGO_MANIFEST_DIR")
         .parse::<PathBuf>()?
         .join("config.toml");
-    let mut config: Config = toml::from_slice(&fs::read(&config_path)?)?;
+    let mut config: Config = toml::from_str(&fs::read_to_string(&config_path)?)?;
 
     // fill the Category with all the whitelisted crates
     for krate in config.crates.iter() {
