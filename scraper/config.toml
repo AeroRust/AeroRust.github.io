@@ -112,3 +112,12 @@ categories = ["Space protocols", "Parsers"]
 [[crates]]
 name = "sgp4"
 categories = ["Astrodynamics", "Parsers"]
+
+[[crates]]
+name = "anise"
+categories = ["Astrodynamics"]
+
+[[crates]]
+name = "hifitime"
+categories = ["Astrodynamics", "Units of measure"]
+
