@@ -41,8 +41,33 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="p-4 mb-3 bg-light rounded text-center overflow-hidden">
+    <div class="my-1 py-1 text-dark">
+      <h3 class="display-5 fst-italic">Subscribe to our newsletter</h2>
+      <p class="lead">and receive emails with the latest news, blog posts and videos!</p>
+    </div>
+    <form action="{{ config.extra.subscribe_form_url }}" method="post" id="mc-embedded-subscribe-form" class="validate" target="_blank">
+      <div class="mb-3 row">
+          <div class="col-12 col-lg-8 offset-lg-2">
+            <input type="email" name="EMAIL" placeholder="Email address" class="form-control form-control-lg" id="inputEmail" aria-describedby="emailHelp">
+          </div>
+          <div id="emailHelp" class="col-12 form-text">We'll only contact you for community related content and never share your email with others.</div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          {# real people should not fill this in and expect good things - do not remove this or risk form bot signups #}
+          <input type="text" name="b_fcb3dda7a7dc64758afa698dd_812128325d" tabindex="-1" value="">
+        </div>
+        {# the newsletter tag #}
+        <input type="hidden" name="tags" value="2988840">
+      <button type="submit" class="btn btn-lg btn-dark">Subscribe</button>
+    </form>
+  </div>
+</div>
+
 <div id="learn-more">
   
 </div>
+
 {# <p>Click <a href="{{ get_url(path=" @/blog/_index.md") }}">here</a> to see my posts.</p> -#}
 {% endblock content %}
