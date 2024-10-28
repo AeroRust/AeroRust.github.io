@@ -47,9 +47,9 @@ website = "https://cooolbox.bg"
 logo = "images/events/scp24/logos/cooolbox-logo.png"
 
 [[extra.Sponsors]]
-name = "Private donation for the volunteers t-shirts"
-website = "#"
-# logo = "images/events/scp24/logos/lechev.space_500x500.png"
+name = "Aleksandar Vinchev"
+website = "https://www.linkedin.com/in/alexvinchev/"
+logo = "images/events/scp24/logos/aleksandar_vinchev.jpeg"
 
 [[extra.Sponsors]]
 name = "Lechev.space Ltd"
