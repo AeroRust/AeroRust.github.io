@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -35,16 +35,14 @@ jobs:
         with:
           file-url: 'https://static.crates.io/db-dump.tar.gz'
           location: './.tmp'
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
+      - uses: dtolnay/rust-toolchain@stable
       - name: Run crates.io DB dump scraper
         uses: actions-rs/cargo@v1
         with:
           command: run
           # args: --release --all-features
       - name: Build Zola and deploy
-        uses: shalzz/zola-deploy-action@v0.17.0
+        uses: shalzz/zola-deploy-action@v0.19.2
         env:
           # Target branch
           PAGES_BRANCH: gh-pages

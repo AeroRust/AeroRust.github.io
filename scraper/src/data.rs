@@ -59,7 +59,8 @@ impl From<&crates::Row> for CrateData {
     fn from(row: &crates::Row) -> Self {
         Self {
             name: row.name.clone(),
-            downloads: row.downloads,
+            // todo:fix
+            downloads: 0,
             description: row.description.clone(),
             homepage: row.homepage.clone(),
             documentation: row.documentation.clone(),
