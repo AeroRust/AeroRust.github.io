@@ -80,7 +80,7 @@ Along with paid tickets, you'll also find t-shirts with a unique AeroRust commun
 Due to logistics and timing, t-shirts available at the conference are limited to 1 week prior to the event 23.09.24. For post-conference pickup t-shirts, we will contact you to obtain a shipping address.
 
 Shipping is not included in the price of the T-shits.
-### Event goals
+## Event goals
 
 We live in a unique moment in time where interest in space and space development is back in full swing.
 
