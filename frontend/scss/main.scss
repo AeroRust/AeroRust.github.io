@@ -68,3 +68,12 @@
     width: 100%;
     height: 100%;
 }
+
+// menu navbar dropdown - disable hover effect
+.nav-item.dropdown .dropdown-item:hover {
+    background: none;
+}
+
+.scroller {
+    overflow: auto;
+}

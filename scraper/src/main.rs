@@ -145,7 +145,6 @@ description = '''
 {description}
 '''
 template = "catalogue/category.html"
-slug = "{slug}"
 paginate_by = 30
 sort_by = "title"
 [extra]
@@ -153,7 +152,6 @@ icon = "{icon}"
 +++"#,
             name = category_data.category.name,
             description = category_data.category.description,
-            slug = category_data.slug,
             icon = category_data.category.icon,
         );
 

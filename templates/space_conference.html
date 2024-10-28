@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% block title %}{{ page.title }}{% endblock %}
+
+
+{% block meta -%}
+    {% if page.extra.meta_image and page.extra.meta_image is starting_with("http") %}
+    {% set meta_image_url = page.extra.meta_image %}
+    {% else %}
+    {% set meta_image_url = get_url(path=page.extra.meta_image) %}
+    {% endif %}
+
+    {% if page.summary is string %}
+    {% set summary = page.summary %}
+    {% else %}
+    {% set summary = "" %}
+    {% endif %}
+
+    {{ meta_macros::facebook_meta(title=page.title, description=summary, url=current_url, image=meta_image_url) }}
+    {{ meta_macros::twitter_meta(title=page.title, description=summary, image=meta_image_url) }}
+{% endblock -%}
+
+{% block content %}
+
+{# organisers, partners, etc. #}
+{% set entities = ["Organisers", "Co-organisers", "Partners", "Sponsors"] -%}
+
+<div class="row gx-5 mt-3">
+  <div class="col-md-8">
+    <article class="blog-post">
+        <h1 class="blog-post-title pb-4 mb-4 fst-italic border-bottom">{{ page.title }}</h1>
+
+        <img src="{{ get_url(path="/images/events/scp24/space-conference-plovdiv-2024.png") }}" class="img-fluid pb-4" alt="{{ page.title }}">
+
+        {{ page.content | safe }}
+
+        {% for entity in entities -%}
+            {% if page.extra[entity] %}
+            <h3 id="{{ entity | lower | slugify }}" class="mb-3">{{ entity }}</h3>
+            <div class="row row-cols-2 g-4 mb-5">
+            {% for entity_type in page.extra[entity] %}
+                <div class="col">
+                    <div class="card h-100 text-bg-dark bg-white">
+                        <div class="h-100 align-content-center">
+                            {% if entity_type.logo %}
+                            <img src="{{ get_url(path=entity_type.logo) }}" alt="{{ entity_type.name }}" class="card-img p-5">
+                            {% else %}
+                            <svg class="card-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="No picture" preserveAspectRatio="xMidYMid slice" focusable="false"><title>No picture</title><rect width="100%" height="100%" fill="#f8f9fa"></rect><text x="50%" y="50%" dy=".3em" fill="black">No picture</text></svg>
+                            {# <svg class="card-img" width="100%" height="300px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="No picture" preserveAspectRatio="xMidYMid slice" focusable="false"><title>No picture</title><rect width="100%" height="100%" fill="#f8f9fa"></rect></svg> #}
+                            {% endif %}
+                        </div>
+                        <a href="{{ entity_type.website }}">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title h5 text-decoration-underline" id="{{ entity_type.name | lower | slugify }}">{{ entity_type.name }}</h4>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            {% endif %}
+        {% endfor %}
+    </article>
+  </div>
+
+  <div class="col-md-4">
+    {% include "partials/event_side.html" -%}
+</div>
+{% endblock content %}

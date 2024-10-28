@@ -20,6 +20,19 @@
             <li><a href="{{ get_url(path="@/_index.md") }}" class="nav-link px-2 text-white{% if get_url(path="@/_index.md") | as_str == current_url %} fw-bold{% endif %}">Home</a></li>
             <li><a href="{{ get_url(path="@/blog/_index.md") }}" class="nav-link px-2 text-white{% if get_url(path="@/blog/_index.md") | as_str == current_url %} fw-bold{% endif %}">Blog</a></li>
             <li><a href="{{ get_url(path="@/catalogue/_index.md") }}" class="nav-link px-2 text-white{% if get_url(path="@/catalogue/_index.md") | as_str == current_url %} fw-bold{% endif %}">Are we in space yet?</a></li>
+            <li class="nav-item dropdown">
+                {% set events_active_paths = [(get_url(path="@/events/space_conference_2024.md") | as_str),] %}
+                <a class="nav-link dropdown-toggle px-2 text-white{% if events_active_paths is containing(current_url) %} fw-bold{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Events
+                </a>
+                <ul class="dropdown-menu">
+                  {# <li><a class="dropdown-item disabled text-white"  aria-disabled="true" href="#">Meetups</a></li> #}
+                  <li><a class="dropdown-item disabled text-white" aria-disabled="true" href="#">Space Conference - Plovdiv (2023)</a></li>
+                  <li><a href="{{ get_url(path="@/events/space_conference_2024.md") }}" class="dropdown-item link-underline-opacity-100-hover> text-white{% if get_url(path="@/events/space_conference_2024.md") | as_str == current_url %} fw-bold{% endif %}">Space Conference - Plovdiv (2024)</a></li>
+                  {# <li><a class="dropdown-item" href="#">Something else here</a></li> #}
+                </ul>
+              </li>      
+            {# <li><a href="{{ get_url(path="@/blog/_index.md") }}" class="nav-link px-2 text-white{% if get_url(path="@/blog/_index.md") | as_str == current_url %} fw-bold{% endif %}">Events</a></li> #}
             {# <li><a href="{{ get_url(path="@/catalogue/crates.md") }}" class="nav-link px-2 text-white{% if get_url(path="@/catalogue/crates.md") | as_str == current_url %} fw-bold{% endif %}">Crates</a></li> #}
         </ul>
 

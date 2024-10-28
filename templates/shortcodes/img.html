@@ -1,0 +1,12 @@
+{# regular old absolute url or path (discouraged) #}
+{% if src %}
+{% set src_url = src %}
+{% elif get_url_src %}
+{% set src_url = get_url(path=get_url_src) %}
+{% else %}
+{% endif %}
+
+{% if src or get_url_src %}
+<img src="{{ src_url }}" {% if class %}class="{{ class }}"{% endif %} {% if alt %}alt="{{ alt }}"{% endif %}>
+{% endif %}
+

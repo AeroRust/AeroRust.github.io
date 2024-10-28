@@ -82,11 +82,11 @@ name = "labrador-ldpc"
 categories = ["Error correction"]
 
 [[crates]]
-name = "YANP"
+name = "yanp"
 categories = ["Parsers"]
 
 [[crates]]
-name = "NMEA"
+name = "nmea"
 categories = ["Parsers"]
 
 [[crates]]
