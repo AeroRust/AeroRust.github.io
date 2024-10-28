@@ -1,0 +1,44 @@
+{# includes ToC + adding entities from a list in the frontmatter of the content markdown #}
+<div {# class="position-sticky"  #}style="top: 2rem;">
+    <div class="p-4 mb-3 bg-light text-dark rounded" style="overflow: auto;">
+      {% if page.extra.show_toc and page.toc %}
+      <h4 class="fst-italic">Table of contents:</h4>
+      <ul class="pt-3">
+          {% for h1 in page.toc %}
+          <li>
+              <a href="{{ h1.permalink | safe }}">{{ h1.title | safe }}</a>
+              {% if h1.children %}
+                  <ul>
+                      {% for h2 in h1.children %}
+                          <li>
+                              <a href="{{ h2.permalink | safe }}">{{ h2.title | safe }}</a>
+                              {% if h2.children %}
+                                  <ul>
+                                      {% for h3 in h2.children %}
+                                          <li>
+                                              <a href="{{ h3.permalink | safe }}">{{ h3.title | safe }}</a>
+                                          </li>
+                                      {% endfor %}
+                                  </ul>
+                              {% endif %}
+                          </li>
+                      {% endfor %}
+                  </ul>
+              {% endif %}
+          </li>
+          {% endfor %}
+          {% for entity in entities -%}
+          {% if page.extra[entity] and page.extra[entity] | length > 0 %}
+          {# <li><a href="#{{ entity | slugify }}">{{ trans(key=entity ~ "s" | capitalize) }}</a></li> #}
+          <li><a href="#{{ entity | lower | slugify }}">{{ entity }}</a></li>
+          <ul>
+              {% for entity_type in page.extra[entity] %}
+              <li><a href="#{{ entity | slugify }}">{{ entity_type.name }}</a></li>
+              {% endfor %}
+          </ul>
+          {% endif -%}
+          {% endfor %}
+      </ul>
+      {% endif %}
+  </div>
+</div>

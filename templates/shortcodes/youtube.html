@@ -1,3 +1,9 @@
 <div {% if class %}class="{{class}}"{% endif %}>
+    {% if id %}
     <iframe src="https://www.youtube-nocookie.com/embed/{{id}}{% if playlist %}?list={{playlist}}{% endif %}{% if autoplay %}?autoplay=1{% endif %}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    {% elif playlist %}
+    <iframe src="https://www.youtube.com/embed/videoseries?list={{playlist}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    {% else %}
+    Only video with playlist or playlist are supported. Please provide either `id` or `playlist` to the shortcode!
+    {% endif %}
 </div>
