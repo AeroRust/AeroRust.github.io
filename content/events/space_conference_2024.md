@@ -133,14 +133,15 @@ Dimitar Ferdinandov is a recent masters graduate in Aerospace Engineering from t
 
 ### 12:05 - Lunch
 
-### 13:00 - Workshop by Nikolay Chortov
+### 13:00 - Artificial Intelligence (workshop) by Nikolay Chortov
 
 Video: Coming soon
 
 ### 13:50 - 🇬🇧 "Machine Learning in Radio astronomy" by Lyuben Branzalov (BAS)
-Video: Coming soon
 
-{{ img(get_url_src="/images/events/scp24/lyuben_branzalov.png", alt="'Machine Learning in Radio astronomy' by Lyuben Branzalov (BAS)", class="img-fluid mb-4" ) }}
+{{ youtube(id="YqfXch3X1Qc", playlist="PL6S-AaFWAAfk0cvBfcVVQ9VVMWQGfdb06", class="youtube my-4" ) }}
+
+<!-- {{ img(get_url_src="/images/events/scp24/lyuben_branzalov.png", alt="'Machine Learning in Radio astronomy' by Lyuben Branzalov (BAS)", class="img-fluid mb-4" ) }} -->
 
 **Abstract:**
 
@@ -154,9 +155,9 @@ Software Engineer studied in Edinburgh, Scotland Computer Science. Google Schola
 ### 14:15 - Coffee break
 ### 14:30 - 🇧🇬 "Micro-cosmos and the Universe" by Stoyan Sargoytchev (World Institute for Scientific Exploration)
 
-Video: Coming soon
+{{ youtube(id="s2Jq9vbFF5o", playlist="PL6S-AaFWAAfk0cvBfcVVQ9VVMWQGfdb06", class="youtube my-4" ) }}
 
-{{ img(get_url_src="/images/events/scp24/stoyan_sargoytchev.png", alt="'Micro-cosmos and the Universe' by Stoyan Sargoytchev (World Institute for Scientific Exploration)", class="img-fluid mb-4" ) }}
+<!-- {{ img(get_url_src="/images/events/scp24/stoyan_sargoytchev.png", alt="'Micro-cosmos and the Universe' by Stoyan Sargoytchev (World Institute for Scientific Exploration)", class="img-fluid mb-4" ) }} -->
 
 **Abstract:**
 
@@ -195,7 +196,8 @@ English translation: Coming soon
 Slides: Comming soon
 Video: Coming soon
 
-{{ img(get_url_src="/images/events/scp24/marcin_szczukiewicz.png", alt="'The Rise of Non-Terrestrial Networks' by Marcin Szczukiewicz (Nokia)", class="img-fluid mb-4" ) }}
+{{ youtube(id="w9owre2DG50", playlist="PL6S-AaFWAAfk0cvBfcVVQ9VVMWQGfdb06", class="youtube my-4" ) }}
+<!-- {{ img(get_url_src="/images/events/scp24/marcin_szczukiewicz.png", alt="'The Rise of Non-Terrestrial Networks' by Marcin Szczukiewicz (Nokia)", class="img-fluid mb-4" ) }} -->
 
 **Abstract:**
 
@@ -222,9 +224,11 @@ I hold degrees in Electronics and Telecommunications and Data Science. In the te
 
 ### 16:00 - 🇬🇧 "Weekend with IMU" by Dawid Królak
 Slides: Comming soon
-Video: Coming soon
 
-{{ img(get_url_src="/images/events/scp24/dawid_krolak.png", alt="'Weekend with IMU' by Dawid Królak", class="img-fluid mb-4" ) }}
+{{ youtube(id="hm8LOfm9-oc", playlist="PL6S-AaFWAAfk0cvBfcVVQ9VVMWQGfdb06", class="youtube my-4" ) }}
+
+
+<!-- {{ img(get_url_src="/images/events/scp24/dawid_krolak.png", alt="'Weekend with IMU' by Dawid Królak", class="img-fluid mb-4" ) }} -->
 
 **Abstract:**
 
