@@ -1,0 +1,10 @@
+{% set metadata = load_data(url="https://api.dub.co/metatags?url=" ~ url, format="json") %}
+<div class="social-preview">
+    <a href="{{ url }}" target="_blank">
+        <img src="{{ metadata.image | default(path="static/images/aerorust_logo.png") }}" alt="{{ metadata.title  }}" />
+        <div>
+            <h3>{{ metadata.title }}</h3>
+            <p>{{ metadata.description }}</p>
+        </div>
+    </a>
+</div>
