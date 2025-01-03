@@ -121,3 +121,6 @@ categories = ["Astrodynamics"]
 name = "hifitime"
 categories = ["Astrodynamics", "Units of measure"]
 
+[[crates]]
+name = "lox-space"
+categories = ["Astrodynamics"]
