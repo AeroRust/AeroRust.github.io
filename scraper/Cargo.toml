@@ -3,7 +3,7 @@ authors = ["AeroRust <aerospace.rust@gmail.com>", "Lachezar Lechev <elpiel93@gma
 name = "scraper"
 version = "0.1.0"
 
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 # for binary
