@@ -110,6 +110,10 @@ name = "ccsds_spacepacket"
 categories = ["Space protocols", "Parsers"]
 
 [[crates]]
+name = "satkit"
+categories = ["Astrodynamics"]
+
+[[crates]]
 name = "sgp4"
 categories = ["Astrodynamics", "Parsers"]
 
