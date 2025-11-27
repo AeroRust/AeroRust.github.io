@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://aerorust.org/dist/main.css" rel="stylesheet">
+  <title>Robotics crates - AeroRust (&#196;R)</title>
+
+  <link rel="icon" type="image/png" href="https://aerorust.org/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://aerorust.org/images/favicon-16x16.png" sizes="16x16">
+  <link rel="canonical" href="https://aerorust.org/catalogue/robotics/page/11/">
+
+  <meta property="og:site_name" content="The AeroRust community website">
+  <meta property="og:title" content="Welcome to AeroRust (ÄR) - Your launchpad to space" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="We build the Open-source ecosystem of Rust for aerospace applications.
+With more than 800 members and multiple projects in the aerospace domain:
+drones, maritime, &quot;Are we in space yet?&quot; crates catalogue and more.
+" />
+<meta property="og:url" content="https://aerorust.org/catalogue/robotics/page/11/" />
+<meta property="og:image" content="https://aerorust.org/images/aerorust-ferris.png" />
+
+    
+<meta name="twitter:title" content="Welcome to AeroRust (ÄR) - Your launchpad to space">
+<meta name="twitter:description" content="We build the Open-source ecosystem of Rust for aerospace applications.
+With more than 800 members and multiple projects in the aerospace domain:
+drones, maritime, &quot;Are we in space yet?&quot; crates catalogue and more.
+">
+<meta name="twitter:image" content=" https://aerorust.org/images/aerorust-ferris.png">
+<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AeroRust">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSCZ6RQFN6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NSCZ6RQFN6');
+  </script>
+  </head>
+
+<body>
+  <a href="https://github.com/AeroRust/aerorust.github.io" class="github-corner">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+        style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+        d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+        fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path
+        d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+        fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<header class="py-3 px-5 bg-aerorust-dark bg-gradient text-aerorust-light">
+    <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="https://aerorust.org/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="rounded-circle bg-white me-2 p-0-5" height="50" src="https://aerorust.org/images/aerorust_logo.png" />
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
+            <li><a href="https://aerorust.org/" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="https://aerorust.org/blog/" class="nav-link px-2 text-white">Blog</a></li>
+            <li><a href="https://aerorust.org/catalogue/" class="nav-link px-2 text-white">Are we in space yet?</a></li>
+            <li class="nav-item dropdown">
+                
+                <a class="nav-link dropdown-toggle px-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Events
+                </a>
+                <ul class="dropdown-menu">
+                  
+                  <li><a class="dropdown-item disabled text-white" aria-disabled="true" href="#">Space Conference - Plovdiv (2023)</a></li>
+                  <li><a href="https://aerorust.org/events/space-conference-2024/" class="dropdown-item link-underline-opacity-100-hover> text-white">Space Conference - Plovdiv (2024)</a></li>
+                  
+                </ul>
+              </li>      
+            
+            
+        </ul>
+
+        </div>
+    </div>
+</header><section class="section text-gray-300">
+    <div class="container">
+      
+
+<div class="category py-4">
+  <div class="h-100 p-5 text-bg-dark rounded-3">
+    <h2>Robotics</h2>
+    <p class="mb-0">Crates applied to robotics, ROS, etc.
+</p>
+  </div>
+
+  <div class="row row-cols-1 gy-4 mt-4">
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          ncomm-update-clients-and-servers
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/ncomm-update-clients-and-servers">
+            <img alt="docs.rs/ncomm-update-clients-and-servers" src="https://img.shields.io/docsrs/ncomm-update-clients-and-servers">
+          </a>
+          <a href="https://crates.io/crates/ncomm-update-clients-and-servers" target="blank">
+              <img src="https://img.shields.io/crates/v/ncomm-update-clients-and-servers.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ncomm-update-clients-and-servers" target="blank">
+              <img src="https://img.shields.io/crates/d/ncomm-update-clients-and-servers.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ncomm-update-clients-and-servers" target="blank">
+              <img src="https://img.shields.io/crates/dr/ncomm-update-clients-and-servers.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/ncomm-update-clients-and-servers" target="blank">
+                <img alt="crates.io/crates/ncomm-update-clients-and-servers" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;N8BWert&#x2F;ncomm"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/ncomm-update-clients-and-servers">Docs.rs/ncomm-update-clients-and-servers</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            NComm Update Clients and Servers
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          ncomm-utils
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/ncomm-utils">
+            <img alt="docs.rs/ncomm-utils" src="https://img.shields.io/docsrs/ncomm-utils">
+          </a>
+          <a href="https://crates.io/crates/ncomm-utils" target="blank">
+              <img src="https://img.shields.io/crates/v/ncomm-utils.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ncomm-utils" target="blank">
+              <img src="https://img.shields.io/crates/d/ncomm-utils.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ncomm-utils" target="blank">
+              <img src="https://img.shields.io/crates/dr/ncomm-utils.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/ncomm-utils" target="blank">
+                <img alt="crates.io/crates/ncomm-utils" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;N8BWert&#x2F;ncomm"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/ncomm-utils">Docs.rs/ncomm-utils</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            NComm Common Utilities Crate.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          ndarray-vision
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/ndarray-vision">
+            <img alt="docs.rs/ndarray-vision" src="https://img.shields.io/docsrs/ndarray-vision">
+          </a>
+          <a href="https://crates.io/crates/ndarray-vision" target="blank">
+              <img src="https://img.shields.io/crates/v/ndarray-vision.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ndarray-vision" target="blank">
+              <img src="https://img.shields.io/crates/d/ndarray-vision.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ndarray-vision" target="blank">
+              <img src="https://img.shields.io/crates/dr/ndarray-vision.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/ndarray-vision" target="blank">
+                <img alt="crates.io/crates/ndarray-vision" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;xd009642&#x2F;ndarray-vision"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/ndarray-vision">Docs.rs/ndarray-vision</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A computer vision library built on top of ndarray
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          newton-sos
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/newton-sos">
+            <img alt="docs.rs/newton-sos" src="https://img.shields.io/docsrs/newton-sos">
+          </a>
+          <a href="https://crates.io/crates/newton-sos" target="blank">
+              <img src="https://img.shields.io/crates/v/newton-sos.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/newton-sos" target="blank">
+              <img src="https://img.shields.io/crates/d/newton-sos.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/newton-sos" target="blank">
+              <img src="https://img.shields.io/crates/dr/newton-sos.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/newton-sos" target="blank">
+                <img alt="crates.io/crates/newton-sos" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;agroudiev&#x2F;newton-sos"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/newton-sos">Docs.rs/newton-sos</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Damped Newton method to solve low-rank problems arising from KernelSOS and Sum-of-Squares relaxations.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nodo
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nodo">
+            <img alt="docs.rs/nodo" src="https://img.shields.io/docsrs/nodo">
+          </a>
+          <a href="https://crates.io/crates/nodo" target="blank">
+              <img src="https://img.shields.io/crates/v/nodo.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo" target="blank">
+              <img src="https://img.shields.io/crates/d/nodo.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo" target="blank">
+              <img src="https://img.shields.io/crates/dr/nodo.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nodo" target="blank">
+                <img alt="crates.io/crates/nodo" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nodo">Docs.rs/nodo</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A realtime framework for robotics
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nodo_cask
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nodo_cask">
+            <img alt="docs.rs/nodo_cask" src="https://img.shields.io/docsrs/nodo_cask">
+          </a>
+          <a href="https://crates.io/crates/nodo_cask" target="blank">
+              <img src="https://img.shields.io/crates/v/nodo_cask.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_cask" target="blank">
+              <img src="https://img.shields.io/crates/d/nodo_cask.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_cask" target="blank">
+              <img src="https://img.shields.io/crates/dr/nodo_cask.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nodo_cask" target="blank">
+                <img alt="crates.io/crates/nodo_cask" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nodo_cask">Docs.rs/nodo_cask</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Message recording to MCPA for NODO
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nodo_derive
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nodo_derive">
+            <img alt="docs.rs/nodo_derive" src="https://img.shields.io/docsrs/nodo_derive">
+          </a>
+          <a href="https://crates.io/crates/nodo_derive" target="blank">
+              <img src="https://img.shields.io/crates/v/nodo_derive.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_derive" target="blank">
+              <img src="https://img.shields.io/crates/d/nodo_derive.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_derive" target="blank">
+              <img src="https://img.shields.io/crates/dr/nodo_derive.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nodo_derive" target="blank">
+                <img alt="crates.io/crates/nodo_derive" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nodo_derive">Docs.rs/nodo_derive</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Derive macros for NODO
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nodo_inspector
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nodo_inspector">
+            <img alt="docs.rs/nodo_inspector" src="https://img.shields.io/docsrs/nodo_inspector">
+          </a>
+          <a href="https://crates.io/crates/nodo_inspector" target="blank">
+              <img src="https://img.shields.io/crates/v/nodo_inspector.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_inspector" target="blank">
+              <img src="https://img.shields.io/crates/d/nodo_inspector.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_inspector" target="blank">
+              <img src="https://img.shields.io/crates/dr/nodo_inspector.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nodo_inspector" target="blank">
+                <img alt="crates.io/crates/nodo_inspector" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nodo_inspector">Docs.rs/nodo_inspector</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Telemetry terminal UI for NODO
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nodo_nng
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nodo_nng">
+            <img alt="docs.rs/nodo_nng" src="https://img.shields.io/docsrs/nodo_nng">
+          </a>
+          <a href="https://crates.io/crates/nodo_nng" target="blank">
+              <img src="https://img.shields.io/crates/v/nodo_nng.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_nng" target="blank">
+              <img src="https://img.shields.io/crates/d/nodo_nng.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_nng" target="blank">
+              <img src="https://img.shields.io/crates/dr/nodo_nng.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nodo_nng" target="blank">
+                <img alt="crates.io/crates/nodo_nng" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nodo_nng">Docs.rs/nodo_nng</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Remote message passing with NNG for NODO
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nodo_runtime
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nodo_runtime">
+            <img alt="docs.rs/nodo_runtime" src="https://img.shields.io/docsrs/nodo_runtime">
+          </a>
+          <a href="https://crates.io/crates/nodo_runtime" target="blank">
+              <img src="https://img.shields.io/crates/v/nodo_runtime.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_runtime" target="blank">
+              <img src="https://img.shields.io/crates/d/nodo_runtime.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_runtime" target="blank">
+              <img src="https://img.shields.io/crates/dr/nodo_runtime.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nodo_runtime" target="blank">
+                <img alt="crates.io/crates/nodo_runtime" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nodo_runtime">Docs.rs/nodo_runtime</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Runtime for NODO applications
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nodo_std
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nodo_std">
+            <img alt="docs.rs/nodo_std" src="https://img.shields.io/docsrs/nodo_std">
+          </a>
+          <a href="https://crates.io/crates/nodo_std" target="blank">
+              <img src="https://img.shields.io/crates/v/nodo_std.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_std" target="blank">
+              <img src="https://img.shields.io/crates/d/nodo_std.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nodo_std" target="blank">
+              <img src="https://img.shields.io/crates/dr/nodo_std.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nodo_std" target="blank">
+                <img alt="crates.io/crates/nodo_std" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nodo_std">Docs.rs/nodo_std</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Standard codelets for NODO
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nuitrack-rs
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nuitrack-rs">
+            <img alt="docs.rs/nuitrack-rs" src="https://img.shields.io/docsrs/nuitrack-rs">
+          </a>
+          <a href="https://crates.io/crates/nuitrack-rs" target="blank">
+              <img src="https://img.shields.io/crates/v/nuitrack-rs.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nuitrack-rs" target="blank">
+              <img src="https://img.shields.io/crates/d/nuitrack-rs.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nuitrack-rs" target="blank">
+              <img src="https://img.shields.io/crates/dr/nuitrack-rs.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nuitrack-rs" target="blank">
+                <img alt="crates.io/crates/nuitrack-rs" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;JOSEPHGILBY&#x2F;nuitrack-rs"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nuitrack-rs">Docs.rs/nuitrack-rs</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Rust bindings for the Nuitrack SDK, enabling skeletal tracking, gesture recognition, and other computer vision capabilities.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nyx-space
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nyx-space">
+            <img alt="docs.rs/nyx-space" src="https://img.shields.io/docsrs/nyx-space">
+          </a>
+          <a href="https://crates.io/crates/nyx-space" target="blank">
+              <img src="https://img.shields.io/crates/v/nyx-space.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nyx-space" target="blank">
+              <img src="https://img.shields.io/crates/d/nyx-space.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nyx-space" target="blank">
+              <img src="https://img.shields.io/crates/dr/nyx-space.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nyx-space" target="blank">
+                <img alt="crates.io/crates/nyx-space" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;nyx-space&#x2F;nyx"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nyx-space">Docs.rs/nyx-space</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A high-fidelity space mission toolkit, with orbit propagation, estimation and some systems engineering
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          odrive-messages
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/odrive-messages">
+            <img alt="docs.rs/odrive-messages" src="https://img.shields.io/docsrs/odrive-messages">
+          </a>
+          <a href="https://crates.io/crates/odrive-messages" target="blank">
+              <img src="https://img.shields.io/crates/v/odrive-messages.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/odrive-messages" target="blank">
+              <img src="https://img.shields.io/crates/d/odrive-messages.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/odrive-messages" target="blank">
+              <img src="https://img.shields.io/crates/dr/odrive-messages.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/odrive-messages" target="blank">
+                <img alt="crates.io/crates/odrive-messages" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;raoz&#x2F;odrive-messages"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/odrive-messages">Docs.rs/odrive-messages</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Unofficial ODrive CAN bus message encoding and decoding
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          onager
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/onager">
+            <img alt="docs.rs/onager" src="https://img.shields.io/docsrs/onager">
+          </a>
+          <a href="https://crates.io/crates/onager" target="blank">
+              <img src="https://img.shields.io/crates/v/onager.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/onager" target="blank">
+              <img src="https://img.shields.io/crates/d/onager.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/onager" target="blank">
+              <img src="https://img.shields.io/crates/dr/onager.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/onager" target="blank">
+                <img alt="crates.io/crates/onager" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;biomechanics-foundation&#x2F;onager"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/onager">Docs.rs/onager</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Featherstone rigid-body physics library built in Rust
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          onebot_v11_oxidebot
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/onebot_v11_oxidebot">
+            <img alt="docs.rs/onebot_v11_oxidebot" src="https://img.shields.io/docsrs/onebot_v11_oxidebot">
+          </a>
+          <a href="https://crates.io/crates/onebot_v11_oxidebot" target="blank">
+              <img src="https://img.shields.io/crates/v/onebot_v11_oxidebot.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/onebot_v11_oxidebot" target="blank">
+              <img src="https://img.shields.io/crates/d/onebot_v11_oxidebot.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/onebot_v11_oxidebot" target="blank">
+              <img src="https://img.shields.io/crates/dr/onebot_v11_oxidebot.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/onebot_v11_oxidebot" target="blank">
+                <img alt="crates.io/crates/onebot_v11_oxidebot" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;canxin121&#x2F;onebot_v11_oxidebot"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/onebot_v11_oxidebot">Docs.rs/onebot_v11_oxidebot</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            OnebotV11 Bot for oxidebot framework
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          opencv-ros-camera
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/opencv-ros-camera">
+            <img alt="docs.rs/opencv-ros-camera" src="https://img.shields.io/docsrs/opencv-ros-camera">
+          </a>
+          <a href="https://crates.io/crates/opencv-ros-camera" target="blank">
+              <img src="https://img.shields.io/crates/v/opencv-ros-camera.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/opencv-ros-camera" target="blank">
+              <img src="https://img.shields.io/crates/d/opencv-ros-camera.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/opencv-ros-camera" target="blank">
+              <img src="https://img.shields.io/crates/dr/opencv-ros-camera.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/opencv-ros-camera" target="blank">
+                <img alt="crates.io/crates/opencv-ros-camera" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;strawlab&#x2F;opencv-ros-camera"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/opencv-ros-camera">Docs.rs/opencv-ros-camera</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Geometric models of OpenCV&#x2F;ROS cameras for photogrammetry
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr">
+            <img alt="docs.rs/openrr" src="https://img.shields.io/docsrs/openrr">
+          </a>
+          <a href="https://crates.io/crates/openrr" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr" target="blank">
+                <img alt="crates.io/crates/openrr" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr">Docs.rs/openrr</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Open Rust Robotics framework
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-apps
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-apps">
+            <img alt="docs.rs/openrr-apps" src="https://img.shields.io/docsrs/openrr-apps">
+          </a>
+          <a href="https://crates.io/crates/openrr-apps" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-apps.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-apps" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-apps.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-apps" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-apps.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-apps" target="blank">
+                <img alt="crates.io/crates/openrr-apps" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-apps">Docs.rs/openrr-apps</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            applications using openrr
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-client
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-client">
+            <img alt="docs.rs/openrr-client" src="https://img.shields.io/docsrs/openrr-client">
+          </a>
+          <a href="https://crates.io/crates/openrr-client" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-client.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-client" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-client.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-client" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-client.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-client" target="blank">
+                <img alt="crates.io/crates/openrr-client" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-client">Docs.rs/openrr-client</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            openrr useful client libraries
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-command
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-command">
+            <img alt="docs.rs/openrr-command" src="https://img.shields.io/docsrs/openrr-command">
+          </a>
+          <a href="https://crates.io/crates/openrr-command" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-command.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-command" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-command.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-command" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-command.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-command" target="blank">
+                <img alt="crates.io/crates/openrr-command" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-command">Docs.rs/openrr-command</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            openrr command line tool library
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-config
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-config">
+            <img alt="docs.rs/openrr-config" src="https://img.shields.io/docsrs/openrr-config">
+          </a>
+          <a href="https://crates.io/crates/openrr-config" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-config.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-config" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-config.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-config" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-config.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-config" target="blank">
+                <img alt="crates.io/crates/openrr-config" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-config">Docs.rs/openrr-config</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Utilities for modifying configuration files
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-gui
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-gui">
+            <img alt="docs.rs/openrr-gui" src="https://img.shields.io/docsrs/openrr-gui">
+          </a>
+          <a href="https://crates.io/crates/openrr-gui" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-gui.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-gui" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-gui.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-gui" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-gui.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-gui" target="blank">
+                <img alt="crates.io/crates/openrr-gui" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-gui">Docs.rs/openrr-gui</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            openrr GUI library
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-planner
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-planner">
+            <img alt="docs.rs/openrr-planner" src="https://img.shields.io/docsrs/openrr-planner">
+          </a>
+          <a href="https://crates.io/crates/openrr-planner" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-planner.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-planner" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-planner.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-planner" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-planner.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-planner" target="blank">
+                <img alt="crates.io/crates/openrr-planner" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-planner">Docs.rs/openrr-planner</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Collision avoidance path planning for robotics
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-plugin
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-plugin">
+            <img alt="docs.rs/openrr-plugin" src="https://img.shields.io/docsrs/openrr-plugin">
+          </a>
+          <a href="https://crates.io/crates/openrr-plugin" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-plugin.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-plugin" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-plugin.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-plugin" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-plugin.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-plugin" target="blank">
+                <img alt="crates.io/crates/openrr-plugin" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-plugin">Docs.rs/openrr-plugin</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Plugin support for arci
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-remote
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-remote">
+            <img alt="docs.rs/openrr-remote" src="https://img.shields.io/docsrs/openrr-remote">
+          </a>
+          <a href="https://crates.io/crates/openrr-remote" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-remote.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-remote" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-remote.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-remote" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-remote.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-remote" target="blank">
+                <img alt="crates.io/crates/openrr-remote" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-remote">Docs.rs/openrr-remote</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Remote execution support for arci
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-sleep
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-sleep">
+            <img alt="docs.rs/openrr-sleep" src="https://img.shields.io/docsrs/openrr-sleep">
+          </a>
+          <a href="https://crates.io/crates/openrr-sleep" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-sleep.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-sleep" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-sleep.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-sleep" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-sleep.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-sleep" target="blank">
+                <img alt="crates.io/crates/openrr-sleep" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-sleep">Docs.rs/openrr-sleep</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            openrr sleep library
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          openrr-teleop
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/openrr-teleop">
+            <img alt="docs.rs/openrr-teleop" src="https://img.shields.io/docsrs/openrr-teleop">
+          </a>
+          <a href="https://crates.io/crates/openrr-teleop" target="blank">
+              <img src="https://img.shields.io/crates/v/openrr-teleop.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-teleop" target="blank">
+              <img src="https://img.shields.io/crates/d/openrr-teleop.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/openrr-teleop" target="blank">
+              <img src="https://img.shields.io/crates/dr/openrr-teleop.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/openrr-teleop" target="blank">
+                <img alt="crates.io/crates/openrr-teleop" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;openrr&#x2F;openrr"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/openrr-teleop">Docs.rs/openrr-teleop</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            openrr teleoperation library
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          optimization_engine
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/optimization_engine">
+            <img alt="docs.rs/optimization_engine" src="https://img.shields.io/docsrs/optimization_engine">
+          </a>
+          <a href="https://crates.io/crates/optimization_engine" target="blank">
+              <img src="https://img.shields.io/crates/v/optimization_engine.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/optimization_engine" target="blank">
+              <img src="https://img.shields.io/crates/d/optimization_engine.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/optimization_engine" target="blank">
+              <img src="https://img.shields.io/crates/dr/optimization_engine.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/optimization_engine" target="blank">
+                <img alt="crates.io/crates/optimization_engine" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;alphaville&#x2F;optimization-engine"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/optimization_engine">Docs.rs/optimization_engine</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A pure Rust framework for embedded nonconvex optimization. Ideal for robotics!
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          owb-core
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/owb-core">
+            <img alt="docs.rs/owb-core" src="https://img.shields.io/docsrs/owb-core">
+          </a>
+          <a href="https://crates.io/crates/owb-core" target="blank">
+              <img src="https://img.shields.io/crates/v/owb-core.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/owb-core" target="blank">
+              <img src="https://img.shields.io/crates/d/owb-core.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/owb-core" target="blank">
+              <img src="https://img.shields.io/crates/dr/owb-core.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/owb-core" target="blank">
+                <img alt="crates.io/crates/owb-core" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;Token-Thinker&#x2F;omni-wheel-bot"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/owb-core">Docs.rs/owb-core</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Core drivers and utilities for the Omni‑Wheel Bot (no‑std embedded robotics)
+            </p>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Pagination">
+    <ul class="pagination mb-0">
+        <li class="page-item me-1 ">
+        <a class="page-link" href="https:&#x2F;&#x2F;aerorust.org&#x2F;catalogue&#x2F;robotics&#x2F;page&#x2F;10&#x2F;" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/1"
+        >1</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/2"
+        >2</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/3"
+        >3</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/4"
+        >4</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/5"
+        >5</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/6"
+        >6</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/7"
+        >7</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/8"
+        >8</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/9"
+        >9</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/10"
+        >10</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link active"
+        aria-current="page" 
+        href="https://aerorust.org/catalogue/robotics/page/11"
+        >11</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/12"
+        >12</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/13"
+        >13</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/14"
+        >14</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/15"
+        >15</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/16"
+        >16</a>
+        </li>
+        <li class="page-item">
+        <a class="page-link ms-1 "
+        href="https:&#x2F;&#x2F;aerorust.org&#x2F;catalogue&#x2F;robotics&#x2F;page&#x2F;12&#x2F;"
+        aria-label="Next"
+        ><span aria-hidden="true">&raquo;</span></a>
+        </li>
+    </ul>
+</nav>
+    </div>
+</div>
+
+    </div>
+  </section>
+
+  <div class="container">
+    <footer class="pt-3 mt-4 text-white-50">
+    <ul class="nav justify-content-center border-bottom pb-2 mb-2">
+        <li class="nav-item"><a href="https://aerorust.org/" class="nav-link px-2 text-white-50">Home</a></li>
+        <li class="nav-item"><a href="https://aerorust.org/catalogue/" class="nav-link px-2 text-white-50">Are we in space yet?</a></li>
+        <li class="nav-item"><a href="https://github.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-github me-1"></i>Github</a></li>
+        <li class="nav-item"><a href="https://discord.gg/6wFvsFWfnu" class="nav-link px-2 text-white-50"><i class="bi bi-discord me-1"></i>Discord</a></li>
+        <li class="nav-item"><a href="https://twitter.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-twitter me-1"></i>Twitter</a></li>
+        <li class="nav-item"><a href="https://youtube.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-youtube me-1"></i>Youtube</a></li>
+        
+    </ul>
+    <p class="text-center">© 2025 AeroRust (&#196;R) community</p>
+</footer>
+  </div>
+    <script src="https://aerorust.org/dist/bundle.js"></script>
+</body>
+
+</html>

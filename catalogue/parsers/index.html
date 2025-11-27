@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://aerorust.org/dist/main.css" rel="stylesheet">
+  <title>Parsers crates - AeroRust (&#196;R)</title>
+
+  <link rel="icon" type="image/png" href="https://aerorust.org/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://aerorust.org/images/favicon-16x16.png" sizes="16x16">
+  <link rel="canonical" href="https://aerorust.org/catalogue/parsers/">
+
+  <meta property="og:site_name" content="The AeroRust community website">
+  <meta property="og:title" content="Welcome to AeroRust (ÄR) - Your launchpad to space" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="We build the Open-source ecosystem of Rust for aerospace applications.
+With more than 800 members and multiple projects in the aerospace domain:
+drones, maritime, &quot;Are we in space yet?&quot; crates catalogue and more.
+" />
+<meta property="og:url" content="https://aerorust.org/catalogue/parsers/" />
+<meta property="og:image" content="https://aerorust.org/images/aerorust-ferris.png" />
+
+    
+<meta name="twitter:title" content="Welcome to AeroRust (ÄR) - Your launchpad to space">
+<meta name="twitter:description" content="We build the Open-source ecosystem of Rust for aerospace applications.
+With more than 800 members and multiple projects in the aerospace domain:
+drones, maritime, &quot;Are we in space yet?&quot; crates catalogue and more.
+">
+<meta name="twitter:image" content=" https://aerorust.org/images/aerorust-ferris.png">
+<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AeroRust">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSCZ6RQFN6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NSCZ6RQFN6');
+  </script>
+  </head>
+
+<body>
+  <a href="https://github.com/AeroRust/aerorust.github.io" class="github-corner">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+        style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+        d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+        fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path
+        d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+        fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<header class="py-3 px-5 bg-aerorust-dark bg-gradient text-aerorust-light">
+    <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="https://aerorust.org/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="rounded-circle bg-white me-2 p-0-5" height="50" src="https://aerorust.org/images/aerorust_logo.png" />
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
+            <li><a href="https://aerorust.org/" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="https://aerorust.org/blog/" class="nav-link px-2 text-white">Blog</a></li>
+            <li><a href="https://aerorust.org/catalogue/" class="nav-link px-2 text-white">Are we in space yet?</a></li>
+            <li class="nav-item dropdown">
+                
+                <a class="nav-link dropdown-toggle px-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Events
+                </a>
+                <ul class="dropdown-menu">
+                  
+                  <li><a class="dropdown-item disabled text-white" aria-disabled="true" href="#">Space Conference - Plovdiv (2023)</a></li>
+                  <li><a href="https://aerorust.org/events/space-conference-2024/" class="dropdown-item link-underline-opacity-100-hover> text-white">Space Conference - Plovdiv (2024)</a></li>
+                  
+                </ul>
+              </li>      
+            
+            
+        </ul>
+
+        </div>
+    </div>
+</header><section class="section text-gray-300">
+    <div class="container">
+      
+
+<div class="category py-4">
+  <div class="h-100 p-5 text-bg-dark rounded-3">
+    <h2>Parsers</h2>
+    <p class="mb-0">
+</p>
+  </div>
+
+  <div class="row row-cols-1 gy-4 mt-4">
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          adsb_deku
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/adsb_deku">
+            <img alt="docs.rs/adsb_deku" src="https://img.shields.io/docsrs/adsb_deku">
+          </a>
+          <a href="https://crates.io/crates/adsb_deku" target="blank">
+              <img src="https://img.shields.io/crates/v/adsb_deku.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/adsb_deku" target="blank">
+              <img src="https://img.shields.io/crates/d/adsb_deku.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/adsb_deku" target="blank">
+              <img src="https://img.shields.io/crates/dr/adsb_deku.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/adsb_deku" target="blank">
+                <img alt="crates.io/crates/adsb_deku" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;wcampbel0x2a&#x2F;adsb_deku"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/adsb_deku">Docs.rs/adsb_deku</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Decoder for ADS-B(Automatic Depedent Surveillance-Broadcast) - written with deku
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          ccsds_primary_header
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/ccsds_primary_header">
+            <img alt="docs.rs/ccsds_primary_header" src="https://img.shields.io/docsrs/ccsds_primary_header">
+          </a>
+          <a href="https://crates.io/crates/ccsds_primary_header" target="blank">
+              <img src="https://img.shields.io/crates/v/ccsds_primary_header.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ccsds_primary_header" target="blank">
+              <img src="https://img.shields.io/crates/d/ccsds_primary_header.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ccsds_primary_header" target="blank">
+              <img src="https://img.shields.io/crates/dr/ccsds_primary_header.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/ccsds_primary_header" target="blank">
+                <img alt="crates.io/crates/ccsds_primary_header" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;nsmryan&#x2F;ccsds_primary_header"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/ccsds_primary_header">Docs.rs/ccsds_primary_header</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Implementation of the CCSDS Primary Header for space applications
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          ccsds_spacepacket
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/ccsds_spacepacket">
+            <img alt="docs.rs/ccsds_spacepacket" src="https://img.shields.io/docsrs/ccsds_spacepacket">
+          </a>
+          <a href="https://crates.io/crates/ccsds_spacepacket" target="blank">
+              <img src="https://img.shields.io/crates/v/ccsds_spacepacket.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ccsds_spacepacket" target="blank">
+              <img src="https://img.shields.io/crates/d/ccsds_spacepacket.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/ccsds_spacepacket" target="blank">
+              <img src="https://img.shields.io/crates/dr/ccsds_spacepacket.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/ccsds_spacepacket" target="blank">
+                <img alt="crates.io/crates/ccsds_spacepacket" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;KubOS-Preservation-Group&#x2F;ccsds-spacepacket"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/ccsds_spacepacket">Docs.rs/ccsds_spacepacket</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            This library attempts to implement a general-purpose parser for Space Packets that can interperet both the generic aspects of the space packet protocol (i.e. the Primary Header) in addition to any custom fields supplied within the Secondary Headers.
+
+Although, this library currently just does Primary Headers, the future goal is to make it a more comprehensive SpacePacket parser.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          nmea
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/nmea">
+            <img alt="docs.rs/nmea" src="https://img.shields.io/docsrs/nmea">
+          </a>
+          <a href="https://crates.io/crates/nmea" target="blank">
+              <img src="https://img.shields.io/crates/v/nmea.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nmea" target="blank">
+              <img src="https://img.shields.io/crates/d/nmea.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/nmea" target="blank">
+              <img src="https://img.shields.io/crates/dr/nmea.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/nmea" target="blank">
+                <img alt="crates.io/crates/nmea" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;AeroRust&#x2F;nmea"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/nmea">Docs.rs/nmea</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Simple NMEA 0183 parser
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          sgp4
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/sgp4">
+            <img alt="docs.rs/sgp4" src="https://img.shields.io/docsrs/sgp4">
+          </a>
+          <a href="https://crates.io/crates/sgp4" target="blank">
+              <img src="https://img.shields.io/crates/v/sgp4.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/sgp4" target="blank">
+              <img src="https://img.shields.io/crates/d/sgp4.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/sgp4" target="blank">
+              <img src="https://img.shields.io/crates/dr/sgp4.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/sgp4" target="blank">
+                <img alt="crates.io/crates/sgp4" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;neuromorphicsystems&#x2F;sgp4&#x2F;"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/sgp4">Docs.rs/sgp4</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A pure Rust implementation of the SGP4 algorithm for satellite propagation
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          yanp
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/yanp">
+            <img alt="docs.rs/yanp" src="https://img.shields.io/docsrs/yanp">
+          </a>
+          <a href="https://crates.io/crates/yanp" target="blank">
+              <img src="https://img.shields.io/crates/v/yanp.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/yanp" target="blank">
+              <img src="https://img.shields.io/crates/d/yanp.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/yanp" target="blank">
+              <img src="https://img.shields.io/crates/dr/yanp.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/yanp" target="blank">
+                <img alt="crates.io/crates/yanp" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/yanp">Docs.rs/yanp</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A no_std nmea sentence parser
+            </p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+    </div>
+  </section>
+
+  <div class="container">
+    <footer class="pt-3 mt-4 text-white-50">
+    <ul class="nav justify-content-center border-bottom pb-2 mb-2">
+        <li class="nav-item"><a href="https://aerorust.org/" class="nav-link px-2 text-white-50">Home</a></li>
+        <li class="nav-item"><a href="https://aerorust.org/catalogue/" class="nav-link px-2 text-white-50">Are we in space yet?</a></li>
+        <li class="nav-item"><a href="https://github.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-github me-1"></i>Github</a></li>
+        <li class="nav-item"><a href="https://discord.gg/6wFvsFWfnu" class="nav-link px-2 text-white-50"><i class="bi bi-discord me-1"></i>Discord</a></li>
+        <li class="nav-item"><a href="https://twitter.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-twitter me-1"></i>Twitter</a></li>
+        <li class="nav-item"><a href="https://youtube.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-youtube me-1"></i>Youtube</a></li>
+        
+    </ul>
+    <p class="text-center">© 2025 AeroRust (&#196;R) community</p>
+</footer>
+  </div>
+    <script src="https://aerorust.org/dist/bundle.js"></script>
+</body>
+
+</html>

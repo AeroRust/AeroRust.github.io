@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://aerorust.org/dist/main.css" rel="stylesheet">
+  <title>Robotics crates - AeroRust (&#196;R)</title>
+
+  <link rel="icon" type="image/png" href="https://aerorust.org/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://aerorust.org/images/favicon-16x16.png" sizes="16x16">
+  <link rel="canonical" href="https://aerorust.org/catalogue/robotics/page/2/">
+
+  <meta property="og:site_name" content="The AeroRust community website">
+  <meta property="og:title" content="Welcome to AeroRust (ÄR) - Your launchpad to space" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="We build the Open-source ecosystem of Rust for aerospace applications.
+With more than 800 members and multiple projects in the aerospace domain:
+drones, maritime, &quot;Are we in space yet?&quot; crates catalogue and more.
+" />
+<meta property="og:url" content="https://aerorust.org/catalogue/robotics/page/2/" />
+<meta property="og:image" content="https://aerorust.org/images/aerorust-ferris.png" />
+
+    
+<meta name="twitter:title" content="Welcome to AeroRust (ÄR) - Your launchpad to space">
+<meta name="twitter:description" content="We build the Open-source ecosystem of Rust for aerospace applications.
+With more than 800 members and multiple projects in the aerospace domain:
+drones, maritime, &quot;Are we in space yet?&quot; crates catalogue and more.
+">
+<meta name="twitter:image" content=" https://aerorust.org/images/aerorust-ferris.png">
+<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AeroRust">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSCZ6RQFN6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NSCZ6RQFN6');
+  </script>
+  </head>
+
+<body>
+  <a href="https://github.com/AeroRust/aerorust.github.io" class="github-corner">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+        style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+        d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+        fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path
+        d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+        fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<header class="py-3 px-5 bg-aerorust-dark bg-gradient text-aerorust-light">
+    <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="https://aerorust.org/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="rounded-circle bg-white me-2 p-0-5" height="50" src="https://aerorust.org/images/aerorust_logo.png" />
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
+            <li><a href="https://aerorust.org/" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="https://aerorust.org/blog/" class="nav-link px-2 text-white">Blog</a></li>
+            <li><a href="https://aerorust.org/catalogue/" class="nav-link px-2 text-white">Are we in space yet?</a></li>
+            <li class="nav-item dropdown">
+                
+                <a class="nav-link dropdown-toggle px-2 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Events
+                </a>
+                <ul class="dropdown-menu">
+                  
+                  <li><a class="dropdown-item disabled text-white" aria-disabled="true" href="#">Space Conference - Plovdiv (2023)</a></li>
+                  <li><a href="https://aerorust.org/events/space-conference-2024/" class="dropdown-item link-underline-opacity-100-hover> text-white">Space Conference - Plovdiv (2024)</a></li>
+                  
+                </ul>
+              </li>      
+            
+            
+        </ul>
+
+        </div>
+    </div>
+</header><section class="section text-gray-300">
+    <div class="container">
+      
+
+<div class="category py-4">
+  <div class="h-100 p-5 text-bg-dark rounded-3">
+    <h2>Robotics</h2>
+    <p class="mb-0">Crates applied to robotics, ROS, etc.
+</p>
+  </div>
+
+  <div class="row row-cols-1 gy-4 mt-4">
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_ecs_macros
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beet">
+            <img alt="documentation" src="https://img.shields.io/docsrs/beet_ecs_macros">
+          </a>
+          <a href="https://crates.io/crates/beet_ecs_macros" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_ecs_macros.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_ecs_macros" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_ecs_macros.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_ecs_macros" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_ecs_macros.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_ecs_macros" target="blank">
+                <img alt="crates.io/crates/beet_ecs_macros" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beet">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A very flexible AI behavior library for games and robotics.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_examples
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_examples">
+            <img alt="docs.rs/beet_examples" src="https://img.shields.io/docsrs/beet_examples">
+          </a>
+          <a href="https://crates.io/crates/beet_examples" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_examples.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_examples" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_examples.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_examples" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_examples.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_examples" target="blank">
+                <img alt="crates.io/crates/beet_examples" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_examples">Docs.rs/beet_examples</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Bits and pieces for substantial beet examples
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_flow
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_flow">
+            <img alt="docs.rs/beet_flow" src="https://img.shields.io/docsrs/beet_flow">
+          </a>
+          <a href="https://crates.io/crates/beet_flow" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_flow.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_flow" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_flow.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_flow" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_flow.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_flow" target="blank">
+                <img alt="crates.io/crates/beet_flow" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_flow">Docs.rs/beet_flow</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            An ECS control flow library
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_flow_macros
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_flow_macros">
+            <img alt="docs.rs/beet_flow_macros" src="https://img.shields.io/docsrs/beet_flow_macros">
+          </a>
+          <a href="https://crates.io/crates/beet_flow_macros" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_flow_macros.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_flow_macros" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_flow_macros.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_flow_macros" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_flow_macros.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_flow_macros" target="blank">
+                <img alt="crates.io/crates/beet_flow_macros" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_flow_macros">Docs.rs/beet_flow_macros</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Bevy Everywhere
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_ml
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_ml">
+            <img alt="docs.rs/beet_ml" src="https://img.shields.io/docsrs/beet_ml">
+          </a>
+          <a href="https://crates.io/crates/beet_ml" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_ml.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_ml" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_ml.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_ml" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_ml.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_ml" target="blank">
+                <img alt="crates.io/crates/beet_ml" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_ml">Docs.rs/beet_ml</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Machine Learning actions built upon beet_flow
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_net
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_net">
+            <img alt="docs.rs/beet_net" src="https://img.shields.io/docsrs/beet_net">
+          </a>
+          <a href="https://crates.io/crates/beet_net" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_net.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_net" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_net.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_net" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_net.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_net" target="blank">
+                <img alt="crates.io/crates/beet_net" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_net">Docs.rs/beet_net</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Cross-platform networking utilities
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_parse
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_parse">
+            <img alt="docs.rs/beet_parse" src="https://img.shields.io/docsrs/beet_parse">
+          </a>
+          <a href="https://crates.io/crates/beet_parse" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_parse.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_parse" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_parse.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_parse" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_parse.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_parse" target="blank">
+                <img alt="crates.io/crates/beet_parse" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_parse">Docs.rs/beet_parse</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Parsers for various text and token formats
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_router
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_router">
+            <img alt="docs.rs/beet_router" src="https://img.shields.io/docsrs/beet_router">
+          </a>
+          <a href="https://crates.io/crates/beet_router" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_router.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_router" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_router.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_router" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_router.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_router" target="blank">
+                <img alt="crates.io/crates/beet_router" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_router">Docs.rs/beet_router</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            ECS router and server utilities
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_router_parser
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_router_parser">
+            <img alt="docs.rs/beet_router_parser" src="https://img.shields.io/docsrs/beet_router_parser">
+          </a>
+          <a href="https://crates.io/crates/beet_router_parser" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_router_parser.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_router_parser" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_router_parser.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_router_parser" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_router_parser.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_router_parser" target="blank">
+                <img alt="crates.io/crates/beet_router_parser" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_router_parser">Docs.rs/beet_router_parser</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Tools for building reactive structures
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_rsx
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_rsx">
+            <img alt="docs.rs/beet_rsx" src="https://img.shields.io/docsrs/beet_rsx">
+          </a>
+          <a href="https://crates.io/crates/beet_rsx" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_rsx.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_rsx.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_rsx.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_rsx" target="blank">
+                <img alt="crates.io/crates/beet_rsx" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_rsx">Docs.rs/beet_rsx</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            An Astro inspired templating system built with bevy
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_rsx_combinator
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_rsx_combinator">
+            <img alt="docs.rs/beet_rsx_combinator" src="https://img.shields.io/docsrs/beet_rsx_combinator">
+          </a>
+          <a href="https://crates.io/crates/beet_rsx_combinator" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_rsx_combinator.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx_combinator" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_rsx_combinator.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx_combinator" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_rsx_combinator.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_rsx_combinator" target="blank">
+                <img alt="crates.io/crates/beet_rsx_combinator" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_rsx_combinator">Docs.rs/beet_rsx_combinator</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            JSX-like parser combinator for Rust
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_rsx_macros
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_rsx_macros">
+            <img alt="docs.rs/beet_rsx_macros" src="https://img.shields.io/docsrs/beet_rsx_macros">
+          </a>
+          <a href="https://crates.io/crates/beet_rsx_macros" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_rsx_macros.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx_macros" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_rsx_macros.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx_macros" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_rsx_macros.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_rsx_macros" target="blank">
+                <img alt="crates.io/crates/beet_rsx_macros" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_rsx_macros">Docs.rs/beet_rsx_macros</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Macros for the beet_rsx crate
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_rsx_parser
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_rsx_parser">
+            <img alt="docs.rs/beet_rsx_parser" src="https://img.shields.io/docsrs/beet_rsx_parser">
+          </a>
+          <a href="https://crates.io/crates/beet_rsx_parser" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_rsx_parser.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx_parser" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_rsx_parser.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_rsx_parser" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_rsx_parser.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_rsx_parser" target="blank">
+                <img alt="crates.io/crates/beet_rsx_parser" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_rsx_parser">Docs.rs/beet_rsx_parser</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Tools for building reactive structures
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_server
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_server">
+            <img alt="docs.rs/beet_server" src="https://img.shields.io/docsrs/beet_server">
+          </a>
+          <a href="https://crates.io/crates/beet_server" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_server.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_server" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_server.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_server" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_server.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_server" target="blank">
+                <img alt="crates.io/crates/beet_server" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_server">Docs.rs/beet_server</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Serve applications with axum and deploy with cargo-lambda.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_sim
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_sim">
+            <img alt="docs.rs/beet_sim" src="https://img.shields.io/docsrs/beet_sim">
+          </a>
+          <a href="https://crates.io/crates/beet_sim" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_sim.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_sim" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_sim.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_sim" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_sim.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_sim" target="blank">
+                <img alt="crates.io/crates/beet_sim" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_sim">Docs.rs/beet_sim</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Game AI simulation primitives built upon beet_flow
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_spatial
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_spatial">
+            <img alt="docs.rs/beet_spatial" src="https://img.shields.io/docsrs/beet_spatial">
+          </a>
+          <a href="https://crates.io/crates/beet_spatial" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_spatial.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_spatial" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_spatial.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_spatial" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_spatial.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_spatial" target="blank">
+                <img alt="crates.io/crates/beet_spatial" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_spatial">Docs.rs/beet_spatial</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Spatial actions built upon beet_flow
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beet_utils
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/beet_utils">
+            <img alt="docs.rs/beet_utils" src="https://img.shields.io/docsrs/beet_utils">
+          </a>
+          <a href="https://crates.io/crates/beet_utils" target="blank">
+              <img src="https://img.shields.io/crates/v/beet_utils.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_utils" target="blank">
+              <img src="https://img.shields.io/crates/d/beet_utils.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beet_utils" target="blank">
+              <img src="https://img.shields.io/crates/dr/beet_utils.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beet_utils" target="blank">
+                <img alt="crates.io/crates/beet_utils" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beet"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/beet_utils">Docs.rs/beet_utils</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Base level utilities for beet crates
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beetmash
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">
+            <img alt="documentation" src="https://img.shields.io/docsrs/beetmash">
+          </a>
+          <a href="https://crates.io/crates/beetmash" target="blank">
+              <img src="https://img.shields.io/crates/v/beetmash.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash" target="blank">
+              <img src="https://img.shields.io/crates/d/beetmash.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash" target="blank">
+              <img src="https://img.shields.io/crates/dr/beetmash.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beetmash" target="blank">
+                <img alt="crates.io/crates/beetmash" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beetmash"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            The number one bevy scene registry.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beetmash-cli
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">
+            <img alt="documentation" src="https://img.shields.io/docsrs/beetmash-cli">
+          </a>
+          <a href="https://crates.io/crates/beetmash-cli" target="blank">
+              <img src="https://img.shields.io/crates/v/beetmash-cli.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash-cli" target="blank">
+              <img src="https://img.shields.io/crates/d/beetmash-cli.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash-cli" target="blank">
+              <img src="https://img.shields.io/crates/dr/beetmash-cli.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beetmash-cli" target="blank">
+                <img alt="crates.io/crates/beetmash-cli" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beetmash"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            CLI tools for managing Beetmash projects.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beetmash_core
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">
+            <img alt="documentation" src="https://img.shields.io/docsrs/beetmash_core">
+          </a>
+          <a href="https://crates.io/crates/beetmash_core" target="blank">
+              <img src="https://img.shields.io/crates/v/beetmash_core.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_core" target="blank">
+              <img src="https://img.shields.io/crates/d/beetmash_core.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_core" target="blank">
+              <img src="https://img.shields.io/crates/dr/beetmash_core.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beetmash_core" target="blank">
+                <img alt="crates.io/crates/beetmash_core" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beetmash"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            The number one bevy scene registry.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beetmash_net
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">
+            <img alt="documentation" src="https://img.shields.io/docsrs/beetmash_net">
+          </a>
+          <a href="https://crates.io/crates/beetmash_net" target="blank">
+              <img src="https://img.shields.io/crates/v/beetmash_net.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_net" target="blank">
+              <img src="https://img.shields.io/crates/d/beetmash_net.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_net" target="blank">
+              <img src="https://img.shields.io/crates/dr/beetmash_net.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beetmash_net" target="blank">
+                <img alt="crates.io/crates/beetmash_net" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beetmash"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A lightweight Bevy replication library.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beetmash_scene
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">
+            <img alt="documentation" src="https://img.shields.io/docsrs/beetmash_scene">
+          </a>
+          <a href="https://crates.io/crates/beetmash_scene" target="blank">
+              <img src="https://img.shields.io/crates/v/beetmash_scene.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_scene" target="blank">
+              <img src="https://img.shields.io/crates/d/beetmash_scene.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_scene" target="blank">
+              <img src="https://img.shields.io/crates/dr/beetmash_scene.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beetmash_scene" target="blank">
+                <img alt="crates.io/crates/beetmash_scene" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beetmash"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            The number one bevy scene registry.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          beetmash_template
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">
+            <img alt="documentation" src="https://img.shields.io/docsrs/beetmash_template">
+          </a>
+          <a href="https://crates.io/crates/beetmash_template" target="blank">
+              <img src="https://img.shields.io/crates/v/beetmash_template.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_template" target="blank">
+              <img src="https://img.shields.io/crates/d/beetmash_template.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/beetmash_template" target="blank">
+              <img src="https://img.shields.io/crates/dr/beetmash_template.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/beetmash_template" target="blank">
+                <img alt="crates.io/crates/beetmash_template" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;beetmash"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;beetmash.com&#x2F;docs&#x2F;beetmash">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            An example workflow for publishing Bevy apps and scenes to Beetmash.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          behaviortree
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/behaviortree">
+            <img alt="docs.rs/behaviortree" src="https://img.shields.io/docsrs/behaviortree">
+          </a>
+          <a href="https://crates.io/crates/behaviortree" target="blank">
+              <img src="https://img.shields.io/crates/v/behaviortree.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/behaviortree" target="blank">
+              <img src="https://img.shields.io/crates/d/behaviortree.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/behaviortree" target="blank">
+              <img src="https://img.shields.io/crates/dr/behaviortree.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/behaviortree" target="blank">
+                <img alt="crates.io/crates/behaviortree" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;stepkun&#x2F;behaviortree.git"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/behaviortree">Docs.rs/behaviortree</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A #![no_std] compatible behavior tree library similar to &#x27;BehaviorTree.CPP&#x27;.
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          bellande_motion_probability
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;bellande-robotics-sensors-research-innovation-center.org&#x2F;api&#x2F;bellande_motion_probability">
+            <img alt="documentation" src="https://img.shields.io/docsrs/bellande_motion_probability">
+          </a>
+          <a href="https://crates.io/crates/bellande_motion_probability" target="blank">
+              <img src="https://img.shields.io/crates/v/bellande_motion_probability.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bellande_motion_probability" target="blank">
+              <img src="https://img.shields.io/crates/d/bellande_motion_probability.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bellande_motion_probability" target="blank">
+              <img src="https://img.shields.io/crates/dr/bellande_motion_probability.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/bellande_motion_probability" target="blank">
+                <img alt="crates.io/crates/bellande_motion_probability" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;Robotics-Sensors&#x2F;bellande_motion_probability"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;bellande-robotics-sensors-research-innovation-center.org&#x2F;api&#x2F;bellande_motion_probability">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            The Bellande Motion Probability algorithm calculates particle movement probabilities using Bellande distributions for enhanced motion estimation
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          bellande_particle
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;bellande-robotics-sensors-research-innovation-center.org&#x2F;bellande_particle&#x2F;docs">
+            <img alt="documentation" src="https://img.shields.io/docsrs/bellande_particle">
+          </a>
+          <a href="https://crates.io/crates/bellande_particle" target="blank">
+              <img src="https://img.shields.io/crates/v/bellande_particle.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bellande_particle" target="blank">
+              <img src="https://img.shields.io/crates/d/bellande_particle.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bellande_particle" target="blank">
+              <img src="https://img.shields.io/crates/dr/bellande_particle.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/bellande_particle" target="blank">
+                <img alt="crates.io/crates/bellande_particle" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;Robotics-Sensors&#x2F;bellande_particle"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;bellande-robotics-sensors-research-innovation-center.org&#x2F;bellande_particle&#x2F;docs">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A particle system using Bellande distributions for robust state estimation and localization
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          bevy_c3d
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/bevy_c3d">
+            <img alt="docs.rs/bevy_c3d" src="https://img.shields.io/docsrs/bevy_c3d">
+          </a>
+          <a href="https://crates.io/crates/bevy_c3d" target="blank">
+              <img src="https://img.shields.io/crates/v/bevy_c3d.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevy_c3d" target="blank">
+              <img src="https://img.shields.io/crates/d/bevy_c3d.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevy_c3d" target="blank">
+              <img src="https://img.shields.io/crates/dr/bevy_c3d.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/bevy_c3d" target="blank">
+                <img alt="crates.io/crates/bevy_c3d" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;biomechanics-foundation&#x2F;bevy_c3d"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/bevy_c3d">Docs.rs/bevy_c3d</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            A plugin for loading C3D motion capture files into Bevy
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          bevy_impulse
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/bevy_impulse">
+            <img alt="docs.rs/bevy_impulse" src="https://img.shields.io/docsrs/bevy_impulse">
+          </a>
+          <a href="https://crates.io/crates/bevy_impulse" target="blank">
+              <img src="https://img.shields.io/crates/v/bevy_impulse.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevy_impulse" target="blank">
+              <img src="https://img.shields.io/crates/d/bevy_impulse.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevy_impulse" target="blank">
+              <img src="https://img.shields.io/crates/dr/bevy_impulse.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/bevy_impulse" target="blank">
+                <img alt="crates.io/crates/bevy_impulse" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;open-rmf&#x2F;bevy_impulse"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/bevy_impulse">Docs.rs/bevy_impulse</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Reactive programming and workflow execution for bevy
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          bevy_impulse_derive
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://docs.rs/bevy_impulse_derive">
+            <img alt="docs.rs/bevy_impulse_derive" src="https://img.shields.io/docsrs/bevy_impulse_derive">
+          </a>
+          <a href="https://crates.io/crates/bevy_impulse_derive" target="blank">
+              <img src="https://img.shields.io/crates/v/bevy_impulse_derive.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevy_impulse_derive" target="blank">
+              <img src="https://img.shields.io/crates/d/bevy_impulse_derive.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevy_impulse_derive" target="blank">
+              <img src="https://img.shields.io/crates/dr/bevy_impulse_derive.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/bevy_impulse_derive" target="blank">
+                <img alt="crates.io/crates/bevy_impulse_derive" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;open-rmf&#x2F;bevy_impulse"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https://docs.rs/bevy_impulse_derive">Docs.rs/bevy_impulse_derive</a>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            Procedural macros for bevy_impulse
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card text-bg-dark crate">
+        <h3 class="card-header">
+          bevyhub-cli
+
+        </h3>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https:&#x2F;&#x2F;bevyhub.dev&#x2F;docs">
+            <img alt="documentation" src="https://img.shields.io/docsrs/bevyhub-cli">
+          </a>
+          <a href="https://crates.io/crates/bevyhub-cli" target="blank">
+              <img src="https://img.shields.io/crates/v/bevyhub-cli.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevyhub-cli" target="blank">
+              <img src="https://img.shields.io/crates/d/bevyhub-cli.svg?maxAge=2592000">
+            </a>
+            <a href="https://crates.io/crates/bevyhub-cli" target="blank">
+              <img src="https://img.shields.io/crates/dr/bevyhub-cli.svg?maxAge=2592000">
+            </a>
+          
+          
+          
+          <div class="hstack gap-2 mt-2">
+              
+              <a href="https://crates.io/crates/bevyhub-cli" target="blank">
+                <img alt="crates.io/crates/bevyhub-cli" height="35" src="https:&#x2F;&#x2F;aerorust.org&#x2F;processed_images&#x2F;cargo.369009054b633eac.png">
+              </a>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;github.com&#x2F;mrchantey&#x2F;bevyhub"><i class="bi bi-code-slash me-2"></i>Repository</a>
+              </small>
+              <div class="vr"></div>
+              <small>
+                <a href="https:&#x2F;&#x2F;bevyhub.dev&#x2F;docs">Documentation</a></span>
+                </small>
+              </div>
+            
+            
+            
+          </div>
+          <p class="card-text">
+            CLI tools for managing Bevyhub projects.
+            </p>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Pagination">
+    <ul class="pagination mb-0">
+        <li class="page-item me-1 ">
+        <a class="page-link" href="https:&#x2F;&#x2F;aerorust.org&#x2F;catalogue&#x2F;robotics&#x2F;" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/1"
+        >1</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link active"
+        aria-current="page" 
+        href="https://aerorust.org/catalogue/robotics/page/2"
+        >2</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/3"
+        >3</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/4"
+        >4</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/5"
+        >5</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/6"
+        >6</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/7"
+        >7</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/8"
+        >8</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/9"
+        >9</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/10"
+        >10</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/11"
+        >11</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/12"
+        >12</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/13"
+        >13</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/14"
+        >14</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/15"
+        >15</a>
+        </li>
+        <li class="page-item">
+        <a
+        class="page-link"
+        
+        href="https://aerorust.org/catalogue/robotics/page/16"
+        >16</a>
+        </li>
+        <li class="page-item">
+        <a class="page-link ms-1 "
+        href="https:&#x2F;&#x2F;aerorust.org&#x2F;catalogue&#x2F;robotics&#x2F;page&#x2F;3&#x2F;"
+        aria-label="Next"
+        ><span aria-hidden="true">&raquo;</span></a>
+        </li>
+    </ul>
+</nav>
+    </div>
+</div>
+
+    </div>
+  </section>
+
+  <div class="container">
+    <footer class="pt-3 mt-4 text-white-50">
+    <ul class="nav justify-content-center border-bottom pb-2 mb-2">
+        <li class="nav-item"><a href="https://aerorust.org/" class="nav-link px-2 text-white-50">Home</a></li>
+        <li class="nav-item"><a href="https://aerorust.org/catalogue/" class="nav-link px-2 text-white-50">Are we in space yet?</a></li>
+        <li class="nav-item"><a href="https://github.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-github me-1"></i>Github</a></li>
+        <li class="nav-item"><a href="https://discord.gg/6wFvsFWfnu" class="nav-link px-2 text-white-50"><i class="bi bi-discord me-1"></i>Discord</a></li>
+        <li class="nav-item"><a href="https://twitter.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-twitter me-1"></i>Twitter</a></li>
+        <li class="nav-item"><a href="https://youtube.com/AeroRust" class="nav-link px-2 text-white-50"><i class="bi bi-youtube me-1"></i>Youtube</a></li>
+        
+    </ul>
+    <p class="text-center">© 2025 AeroRust (&#196;R) community</p>
+</footer>
+  </div>
+    <script src="https://aerorust.org/dist/bundle.js"></script>
+</body>
+
+</html>
