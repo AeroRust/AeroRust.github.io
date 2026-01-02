@@ -6,59 +6,59 @@
 }
 
 .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+    animation: octocat-wave 560ms ease-in-out;
 }
 
 .github-corner:hover .octo-arm {
-    animation: none
+    animation: none;
 }
 
 @include media-breakpoint-up(sm) {
     .github-corner:hover .octo-arm {
-        animation: octocat-wave 560ms ease-in-out
+        animation: octocat-wave 560ms ease-in-out;
     }
 
     .github-corner .octo-arm {
-        animation: none
+        animation: none;
     }
 }
 
 @keyframes octocat-wave {
     0%,
     100% {
-        transform: rotate(0)
+        transform: rotate(0);
     }
 
     20%,
     60% {
-        transform: rotate(-25deg)
+        transform: rotate(-25deg);
     }
 
     40%,
     80% {
-        transform: rotate(10deg)
+        transform: rotate(10deg);
     }
 }
 
 .form-control-dark:focus {
     border-color: $white;
-    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
 }
 
 .crate {
-
-    .card-header a, .card-title a {
+    .card-header a,
+    .card-title a {
         text-decoration: none;
     }
 }
 
 .youtube {
     position: relative;
-    padding-bottom: 56.10%;
+    padding-bottom: 56.1%;
     height: 0;
     overflow: hidden;
 }
- 
+
 .youtube iframe,
 .youtube object,
 .youtube embed {
@@ -76,4 +76,35 @@
 
 .scroller {
     overflow: auto;
+}
+
+/* social preview card */
+.social-preview {
+    display: flex;
+    overflow: hidden;
+    margin: 1rem 0;
+    width: 100%;
+    height: fit-content;
+
+    img {
+        height: 200px;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    div {
+        padding: 0.5rem;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    p {
+        margin: 0.5rem 0 0;
+        color: $white;
+        text-decoration: none;
+    }
 }
