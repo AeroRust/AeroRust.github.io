@@ -41,7 +41,7 @@ jobs:
       - name: Run crates.io DB dump scraper
         run: cargo run
       - name: Build Zola and deploy
-        uses: shalzz/zola-deploy-action@v0.21.0
+        uses: shalzz/zola-deploy-action@v0.22.0
         env:
           # Target branch
           PAGES_BRANCH: gh-pages
